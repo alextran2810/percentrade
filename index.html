@@ -130,11 +130,15 @@
             // Mark as visited
             localStorage.setItem('percentradeVisited', 'true');
             
-            // Auto-redirect to home page after animation completes
+            // Get the page user wanted to visit (or default to home)
+            const returnToPage = sessionStorage.getItem('returnToPage') || 'home.html';
+            
+            // Auto-redirect to original page after animation completes
             setTimeout(() => {
                 document.body.classList.add('fade-out');
                 setTimeout(() => {
-                    window.location.href = 'home.html';
+                    sessionStorage.removeItem('returnToPage'); // Clean up
+                    window.location.href = returnToPage;
                 }, 500);
             }, 3000); // Total animation time: 3 seconds
 
@@ -142,7 +146,8 @@
             document.addEventListener('click', () => {
                 document.body.classList.add('fade-out');
                 setTimeout(() => {
-                    window.location.href = 'home.html';
+                    sessionStorage.removeItem('returnToPage'); // Clean up
+                    window.location.href = returnToPage;
                 }, 500);
             });
 
@@ -150,7 +155,8 @@
             document.addEventListener('keydown', () => {
                 document.body.classList.add('fade-out');
                 setTimeout(() => {
-                    window.location.href = 'home.html';
+                    sessionStorage.removeItem('returnToPage'); // Clean up
+                    window.location.href = returnToPage;
                 }, 500);
             });
         }

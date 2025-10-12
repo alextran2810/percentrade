@@ -7,6 +7,8 @@
     <script>
         // Check BEFORE page loads - redirect first-time visitors to intro
         if (!localStorage.getItem('percentradeVisited')) {
+            // Save the current page to return to after intro
+            sessionStorage.setItem('returnToPage', window.location.href);
             window.location.replace('index.html');
         }
     </script>
