@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Percentrade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: #ffd700;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        h2 {
+            font-size: 2.1rem;
+            margin: 2rem 0 1rem 0;
+            color: #ffd700;
+        }
+
+        h3 {
+            margin: 1.5rem 0 0.5rem 0;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin: 1rem 0 1rem 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .important {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+
+        /* Main content wrapper */
+        .main-wrapper {
+            flex: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0 5px;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .footer-links .separator {
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .logo {
+                height: 35px;
+            }
+
+            .logo-text {
+                font-size: 1.4rem;
+            }
+
+            .page-header {
+                padding: 100px 0 40px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                padding: 60px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            footer {
+                padding: 1.5rem 0;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-links .separator {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Header -->
+        <header>
+        <nav class="container">
+            <a href="home.html" class="logo-container">
+                <img src="percentrade_logo.png" alt="Percentrade" class="logo">
+                <span class="logo-text">Percentrade</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Terms of Use</h1>
+            <p class="last-updated">Last updated: October 11, 2025</p>
+
+            <div class="important">
+                <p><strong>Important:</strong> By using Percentrade's services, you acknowledge that our analytics tools provide statistical insights only. No system can guarantee winning outcomes in gaming or trading activities.</p>
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using Percentrade's analytics services, you accept and agree to be bound by the terms and conditions of this agreement. If you do not agree to these terms, you should not use our services.</p>
+
+            <h2>2. Description of Service</h2>
+            <p>Percentrade provides statistical analysis and data analytics tools for gaming and financial markets, including:</p>
+            <ul>
+                <li>Roumate and pattern analysis</li>
+                <li>Baccarat trending tools</li>
+                <li>Future stock analytics capabilities</li>
+                <li>Data visualization and reporting features</li>
+            </ul>
+
+            <h2>3. User Responsibilities</h2>
+            <h3>You agree to:</h3>
+            <ul>
+                <li>Use our services responsibly and legally</li>
+                <li>Provide accurate information when creating an account</li>
+                <li>Maintain the security of your account credentials</li>
+                <li>Not attempt to reverse engineer or hack our systems</li>
+                <li>Not use our services for any illegal activities</li>
+            </ul>
+
+            <h2>4. Disclaimers and Limitations</h2>
+            <div class="important">
+                <h3>Important Disclaimers:</h3>
+                <ul>
+                    <li><strong>No Guarantees:</strong> Our analytics do not guarantee winning outcomes</li>
+                    <li><strong>Statistical Nature:</strong> All insights are based on historical data and patterns</li>
+                    <li><strong>Risk Awareness:</strong> Gaming and trading involve inherent risks</li>
+                    <li><strong>Personal Responsibility:</strong> You are solely responsible for your decisions</li>
+                </ul>
+            </div>
+
+            <h2>5. System Accuracy and Assumption of Risk</h2>
+            <p>By accessing or using any Percentrade webpage, dashboard, or API, you accept that our statistical outputs can include errors, delays, omissions, or incomplete data. Models may change, inputs may be corrupted, and external data sources can fail. You agree to evaluate our insights alongside your own judgment and independent verification before acting on any recommendation.</p>
+            <ul>
+                <li>Analytics, forecasts, and probability estimates are provided on an “as is” and “as available” basis.</li>
+                <li>You remain solely responsible for confirming the accuracy and suitability of any result prior to using it in gaming or trading decisions.</li>
+                <li>Percentrade is not liable for losses or damages arising from calculation errors, system malfunctions, or outdated information.</li>
+                <li>If you discover an issue, you agree to notify us promptly so we can investigate and remediate it.</li>
+            </ul>
+
+            <h2>6. Plans and Advertising</h2>
+            <ul>
+                <li><strong>Free Plan:</strong> May include limited usage and display advertisements.</li>
+                <li><strong>Paid Plan:</strong> Provides enhanced features and an ad-free experience.</li>
+                <li>We may modify plan features with reasonable notice.</li>
+            </ul>
+            <p>Free plan users acknowledge that third-party ad networks (e.g., Google AdSense/AdMob) may display ads and collect data as outlined in our <a href="privacy-policy.html" style="color: #ffd700;">Privacy Policy</a>.</p>
+
+            <h2>7. Subscriptions, Payments, and Refunds</h2>
+            <ul>
+                <li>Payments are processed by third-party providers (e.g., Stripe, Apple Pay, Google Pay). We do not store full card details.</li>
+                <li>Subscriptions renew automatically unless canceled before renewal.</li>
+                <li>All purchases are final and non-refundable except where required by law.</li>
+            </ul>
+
+            <h2>8. Device Limitations</h2>
+            <p>Access may be tied to a device identifier. Sharing accounts, bypassing device restrictions, or misuse may result in suspension or termination.</p>
+
+            <h2>9. Intellectual Property</h2>
+            <p>All content, algorithms, and intellectual property related to Percentrade's services remain our exclusive property. You may not:</p>
+            <ul>
+                <li>Copy, modify, or distribute our proprietary algorithms</li>
+                <li>Reverse engineer our analytical methods</li>
+                <li>Use our brand name or logos without permission</li>
+                <li>Resell or redistribute our analytics data</li>
+            </ul>
+
+            <h2>10. Privacy and Data</h2>
+            <p>Your privacy is important to us. Please review our <a href="privacy-policy.html" style="color: #ffd700;">Privacy Policy</a> to understand how we collect, use, and protect your information.</p>
+
+            <h2>11. User Consent and Communications</h2>
+            <h3>Consent for Communications</h3>
+            <p>By creating an account or subscribing to our services, you explicitly consent to receive communications from Percentrade through the contact methods you provide, including:</p>
+            <ul>
+                <li>Email communications (service updates, account notifications, support responses)</li>
+                <li>Phone communications (if you provide a phone number for account recovery or support)</li>
+                <li>Social media interactions (if you connect or contact us via social platforms)</li>
+            </ul>
+
+            <h3>Types of Communications</h3>
+            <p>We may contact you for:</p>
+            <ul>
+                <li><strong>Transactional Messages:</strong> Account confirmations, password resets, billing notifications, and service-related updates (you cannot opt-out of these essential communications)</li>
+                <li><strong>Marketing Communications:</strong> Product updates, new features, promotional offers, and newsletters (you may opt-out at any time)</li>
+                <li><strong>Support Communications:</strong> Responses to your inquiries and customer service interactions</li>
+            </ul>
+
+            <h3>Opt-In Requirements</h3>
+            <ul>
+                <li>Marketing communications require explicit opt-in consent during registration or account settings</li>
+                <li>You must actively check opt-in boxes to receive promotional communications</li>
+                <li>Providing your contact information does not automatically enroll you in marketing lists</li>
+                <li>Third-party sharing of contact information requires separate consent</li>
+            </ul>
+
+            <h3>Opt-Out and Unsubscribe Rights</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Unsubscribe from marketing emails using the link in every promotional message</li>
+                <li>Update communication preferences in your account settings</li>
+                <li>Request removal from all non-essential communications by contacting support@percentrade.com</li>
+                <li>Withdraw consent for specific communication channels at any time</li>
+            </ul>
+
+            <h3>Record of Consent</h3>
+            <p>We maintain records of:</p>
+            <ul>
+                <li>When and how you provided consent for communications</li>
+                <li>The specific types of communications you consented to receive</li>
+                <li>Your communication preference updates and opt-out requests</li>
+                <li>IP address and timestamp of consent actions for verification purposes</li>
+            </ul>
+
+            <h3>Social Media Consent</h3>
+            <p>If you interact with Percentrade through social media platforms:</p>
+            <ul>
+                <li>Your interactions are also governed by the respective platform's terms and privacy policies</li>
+                <li>We may respond to public comments, messages, or mentions</li>
+                <li>Consent to contact you via social media is implied by initiating contact with us</li>
+                <li>You can withdraw consent by blocking, unfollowing, or discontinuing communication</li>
+            </ul>
+
+            <h2>12. Account Terms</h2>
+            <h3>Account Creation:</h3>
+            <ul>
+                <li>You must provide accurate registration information</li>
+                <li>You are responsible for maintaining account security</li>
+                <li>One account per person is permitted</li>
+                <li>We reserve the right to suspend accounts for violations</li>
+            </ul>
+
+            <h2>13. Service Availability</h2>
+            <p>While we strive for high availability, we do not guarantee uninterrupted service. We may:</p>
+            <ul>
+                <li>Perform maintenance that temporarily affects service</li>
+                <li>Update or modify features without notice</li>
+                <li>Discontinue certain features or services</li>
+                <li>Limit access during high-traffic periods</li>
+            </ul>
+
+            <h2>14. Prohibited Uses</h2>
+            <p>You may not use our services to:</p>
+            <ul>
+                <li>Engage in any illegal gambling activities</li>
+                <li>Violate any applicable laws or regulations</li>
+                <li>Harass, abuse, or harm other users</li>
+                <li>Distribute malware or malicious code</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+            </ul>
+
+            <h2>15. Limitation of Liability</h2>
+            <p>Percentrade shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from:</p>
+            <ul>
+                <li>Use or inability to use our services</li>
+                <li>Any decisions made based on our analytics</li>
+                <li>Service interruptions or technical issues</li>
+                <li>Any financial losses in gaming or trading activities</li>
+            </ul>
+
+            <h2>16. Termination</h2>
+            <p>We may terminate or suspend your account immediately, without prior notice, for conduct that we believe violates these Terms of Use or is harmful to other users, us, or third parties.</p>
+
+            <h2>17. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services after changes constitutes acceptance of the new terms.</p>
+
+            <h2>18. Governing Law</h2>
+            <p>These terms shall be governed by and construed in accordance with applicable laws. Any disputes will be resolved through binding arbitration.</p>
+
+            <h2>19. Contact Information</h2>
+            <p>For questions about these Terms of Use, please contact us:</p>
+            <ul>
+                <li>Email: support@percentrade.com</li>
+                <li>Contact form: <a href="contact.html" style="color: #ffd700;">Contact Us</a></li>
+            </ul>
+
+            <div class="important" style="margin-top: 3rem;">
+                <p><strong>Final Reminder:</strong> Percentrade provides analytical tools for informational purposes only. Always gamble and trade responsibly, never risk more than you can afford to lose, and remember that past performance does not guarantee future results.</p>
+            </div>
+
+            <p style="margin-top: 3rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
+                <em>These Terms of Use are effective as of the date listed above and apply to all users of Percentrade's services.</em>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="terms-of-use.html">Terms of Use</a>
+                <span class="separator">|</span>
+                <a href="about.html">About Us</a>
+                <span class="separator">|</span>
+                <a href="mailto:support@percentrade.com">support@percentrade.com</a>
+                <span class="separator">|</span>
+                <a href="home.html">Home</a>
+            </div>
+            <p>&copy; 2025 Percentrade. All rights reserved. | Advanced Analytics & Statistical Intelligence</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
+
+

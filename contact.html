@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Percentrade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: #ffd700;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 80px 0 50px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffd700;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            align-items: start;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-info {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #ffd700;
+        }
+
+        .contact-info h3 {
+            font-size: 1.1rem;
+            margin: 2rem 0 1rem 0;
+            color: #ffd700;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info ul {
+            margin: 1rem auto;
+            padding-left: 1.5rem;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #ffd700;
+            min-width: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ffd700;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #ffd700;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: rgba(255, 215, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+        }
+
+        /* Main content wrapper */
+        .main-wrapper {
+            flex: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0 5px;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .footer-links .separator {
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .logo {
+                height: 35px;
+            }
+
+            .logo-text {
+                font-size: 1.4rem;
+            }
+
+            .page-header {
+                padding: 100px 0 40px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            .contact {
+                padding: 60px 0;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .contact-info {
+                padding: 1.5rem;
+            }
+
+            .contact-info h2 {
+                font-size: 2rem;
+            }
+
+            .contact-info h3 {
+                font-size: 1.3rem;
+            }
+
+            .submit-btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 1.5rem 0;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-links .separator {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            .contact-form {
+                padding: 1rem;
+            }
+
+            .contact-info {
+                padding: 1rem;
+            }
+
+            .contact-info h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Header -->
+        <header>
+        <nav class="container">
+            <a href="home.html" class="logo-container">
+                <img src="percentrade_logo.png" alt="Percentrade" class="logo">
+                <span class="logo-text">Percentrade</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact</h1>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>About Percentrade</h2>
+                    <p>Percentrade is an innovative analytics company specializing in statistical analysis and predictive modeling for gaming and financial markets. We leverage advanced algorithms and data science to provide insights that help our clients make more informed decisions.</p>
+
+                    <h3>Our Mission</h3>
+                    <p>To transform raw data into actionable intelligence, offering sophisticated tools that analyze patterns, trends, and probabilities across various markets and gaming platforms.</p>
+
+                    <h3>Our Approach</h3>
+                    <p>We combine cutting-edge technology with statistical expertise to deliver solutions that minimize risks and optimize decision-making processes, though we always emphasize that no system can guarantee outcomes.</p>
+                </div>
+
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 2rem; color: #2c3e50; text-align: center;">Send us a Message</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us more about your inquiry..." required></textarea>
+                        </div>
+                        <div style="text-align: center;">
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="terms-of-use.html">Terms of Use</a>
+                <span class="separator">|</span>
+                <a href="about.html">About Us</a>
+                <span class="separator">|</span>
+                <a href="mailto:support@percentrade.com">support@percentrade.com</a>
+                <span class="separator">|</span>
+                <a href="home.html">Home</a>
+            </div>
+            <p>&copy; 2025 Percentrade. All rights reserved. | Advanced Analytics & Statistical Intelligence</p>
+        </div>
+    </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.documentElement.style.zoom = '100%';
+            document.body.style.zoom = '100%';
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24-48 hours.');
+            this.reset();
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(0, 0, 0, 0.5)';
+                header.style.backdropFilter = 'blur(25px)';
+                header.style.webkitBackdropFilter = 'blur(25px)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.3)';
+                header.style.backdropFilter = 'blur(20px)';
+                header.style.webkitBackdropFilter = 'blur(20px)';
+            }
+        });
+    </script>
+</body>
+</html>

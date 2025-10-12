@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Percentrade</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo {
+            height: 45px;
+            width: auto;
+        }
+
+        .logo-text {
+            color: #ffd700;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 120px 0 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #ffd700;
+        }
+
+        h2 {
+            font-size: 2.1rem;
+            margin: 2rem 0 1rem 0;
+            color: #ffd700;
+        }
+
+        h3 {
+            margin: 1.5rem 0 0.5rem 0;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+
+        ul {
+            margin: 1rem 0 1rem 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        /* Main content wrapper */
+        .main-wrapper {
+            flex: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 0 5px;
+        }
+
+        .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        .footer-links .separator {
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .logo {
+                height: 35px;
+            }
+
+            .logo-text {
+                font-size: 1.4rem;
+            }
+
+            .page-header {
+                padding: 100px 0 40px;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                padding: 60px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            footer {
+                padding: 1.5rem 0;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-links .separator {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Header -->
+        <header>
+        <nav class="container">
+            <a href="home.html" class="logo-container">
+                <img src="percentrade_logo.png" alt="Percentrade" class="logo">
+                <span class="logo-text">Percentrade</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: October 11, 2025</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>Percentrade collects information you provide directly to us, such as when you create an account, use our analytics tools, or contact us for support.</p>
+            
+            <h3>Information You Provide</h3>
+            <ul>
+                <li>Account information (email address, username, first name, last name)</li>
+                <li>Contact information (phone number, if provided for account recovery)</li>
+                <li>Communication preferences and consent records</li>
+                <li>Support and feedback messages</li>
+                <li>Analytics usage data and preferences</li>
+                <li>Subscription and billing information</li>
+            </ul>
+
+            <h3>Information We Collect Automatically</h3>
+            <ul>
+                <li>Usage data and analytics interactions</li>
+                <li>Device information and browser type (device ID, browser info)</li>
+                <li>IP address and general location data</li>
+                <li>Cookies and similar tracking technologies</li>
+                <li>Number of inputs, pages visited, feature usage frequency</li>
+                <li>Ad interaction data (for free plan users)</li>
+            </ul>
+
+            <h3>Payment and Subscription Data</h3>
+            <ul>
+                <li>Subscription plan and status</li>
+                <li>Stripe customer/subscription IDs</li>
+                <li>Payment method metadata (card brand, last 4 digits) via payment provider</li>
+                <li>We do not store full credit card information - handled by third-party processors</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide, maintain, and improve our analytics services (dashboard, profiles, statistics)</li>
+                <li>Communicate with you about updates, support, and account notifications</li>
+                <li>Process subscriptions and manage billing</li>
+                <li>Send marketing communications (only with your explicit consent)</li>
+                <li>Display ads to free users and encourage subscription upgrades</li>
+                <li>Analyze usage patterns to enhance user experience</li>
+                <li>Ensure platform security, fraud prevention, and protect the service</li>
+                <li>Respond to your requests and provide customer support</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+
+            <h2>3. Consent and Communication Preferences</h2>
+            <h3>How We Obtain Consent</h3>
+            <p>We collect and record your consent for communications in the following ways:</p>
+            <ul>
+                <li><strong>Account Registration:</strong> During sign-up, you provide consent for essential service communications</li>
+                <li><strong>Opt-In Checkboxes:</strong> Separate checkboxes for marketing emails, promotional offers, and newsletters</li>
+                <li><strong>Phone Consent:</strong> If you provide a phone number, you consent to account-related calls (not marketing unless separately agreed)</li>
+                <li><strong>Social Media Consent:</strong> By contacting us through social platforms, you consent to responses via that channel</li>
+                <li><strong>Consent Records:</strong> We maintain timestamped records of when and how you provided consent, including IP address and consent type</li>
+            </ul>
+
+            <h3>Types of Communications</h3>
+            <ul>
+                <li><strong>Essential/Transactional:</strong> Account confirmations, security alerts, password resets, billing notifications (cannot opt-out)</li>
+                <li><strong>Marketing:</strong> Product updates, new features, promotions, newsletters (requires opt-in, can unsubscribe anytime)</li>
+                <li><strong>Support:</strong> Responses to your inquiries via email, phone, or social media</li>
+            </ul>
+
+            <h3>Your Communication Rights</h3>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Opt-in or opt-out of marketing communications at any time</li>
+                <li>Update your communication preferences in account settings</li>
+                <li>Unsubscribe from marketing emails using the link in every message</li>
+                <li>Request to stop non-essential communications by contacting support@percentrade.com</li>
+                <li>Withdraw consent for specific communication channels without affecting your account</li>
+                <li>View records of consent you've provided upon request</li>
+            </ul>
+
+            <h2>4. Information Sharing</h2>
+            <p>We do not sell, trade, or otherwise transfer your personal information to third parties, except in the following circumstances:</p>
+            <ul>
+                <li>With your explicit consent</li>
+                <li>With payment processors (e.g., Stripe, Apple Pay, Google Pay) to manage payments and subscriptions</li>
+                <li>With ad providers (e.g., Google AdSense/AdMob) to deliver relevant advertising to free users</li>
+                <li>With analytics services (if used) to monitor performance and improve features</li>
+                <li>To comply with legal requirements or court orders</li>
+                <li>To protect our rights, safety, and property</li>
+                <li>With trusted service providers who assist in our operations (under strict confidentiality agreements)</li>
+            </ul>
+            <p><strong>Important:</strong> We do not sell your personal information to third parties for marketing purposes.</p>
+
+            <h2>5. Data Security</h2>
+            <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+
+            <h2>5. Data Security</h2>
+            <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+            <p>Our security measures include:</p>
+            <ul>
+                <li>Encryption of sensitive data in transit and at rest</li>
+                <li>Regular security audits and updates</li>
+                <li>Access controls and authentication requirements</li>
+                <li>Secure payment processing through certified third-party providers</li>
+            </ul>
+
+            <h2>6. Data Retention</h2>
+            <p>We retain your personal information only as long as necessary to provide our services and comply with legal obligations. You may request deletion of your account and associated data at any time.</p>
+            <p>Retention periods:</p>
+            <ul>
+                <li><strong>Active Accounts:</strong> Data retained while account is active and for reasonable period after</li>
+                <li><strong>Closed Accounts:</strong> Personal data deleted or anonymized within 90 days of account closure, except as required by law</li>
+                <li><strong>Consent Records:</strong> Maintained for compliance purposes (typically 3-7 years depending on jurisdiction)</li>
+                <li><strong>Financial Records:</strong> Retained as required by tax and financial regulations</li>
+            </ul>
+
+            <h2>7. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access and update your personal information</li>
+                <li>Request deletion of your data</li>
+                <li>Opt-out of marketing communications</li>
+                <li>Export your data in a portable format</li>
+            </ul>
+
+            <h3>GDPR (EU) Rights</h3>
+            <ul>
+                <li>Right of access, rectification, and erasure</li>
+                <li>Right to restrict or object to processing</li>
+                <li>Right to data portability</li>
+                <li>Right to withdraw consent at any time</li>
+            </ul>
+
+            <h3>CCPA (California) Rights</h3>
+            <ul>
+                <li>Right to know what personal data we collect and how we use it</li>
+                <li>Right to request deletion of your data</li>
+                <li>Right to opt-out of the sale of personal data (we do not sell personal data)</li>
+                <li>Right not to be discriminated against for exercising your rights</li>
+            </ul>
+            <p>To exercise these rights, please contact us at <a href="mailto:support@percentrade.com" style="color: #ffd700;">support@percentrade.com</a>.</p>
+
+            <h2>7. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access and update your personal information</li>
+                <li>Request deletion of your data</li>
+                <li>Opt-out of marketing communications</li>
+                <li>Withdraw consent for data processing</li>
+                <li>Export your data in a portable format</li>
+                <li>Object to certain types of data processing</li>
+            </ul>
+
+            <h3>GDPR (EU) Rights</h3>
+            <ul>
+                <li>Right of access, rectification, and erasure</li>
+                <li>Right to restrict or object to processing</li>
+                <li>Right to data portability</li>
+                <li>Right to withdraw consent at any time</li>
+                <li>Right to lodge a complaint with a supervisory authority</li>
+            </ul>
+
+            <h3>CCPA (California) Rights</h3>
+            <ul>
+                <li>Right to know what personal data we collect and how we use it</li>
+                <li>Right to request deletion of your data</li>
+                <li>Right to opt-out of the sale of personal data (we do not sell personal data)</li>
+                <li>Right not to be discriminated against for exercising your rights</li>
+            </ul>
+            <p>To exercise these rights, please contact us at <a href="mailto:support@percentrade.com" style="color: #ffd700;">support@percentrade.com</a>.</p>
+
+            <h2>8. Cookies and Tracking</h2>
+            <p>We use cookies and similar technologies to enhance your experience, analyze usage, and provide personalized content. You can control cookie settings through your browser preferences.</p>
+
+            <h3>Advertising and Cookies</h3>
+            <p>On free plans, ads may be displayed by third-party networks (e.g., Google AdSense/AdMob). These providers may use cookies or mobile advertising IDs to serve personalized ads based on your interests and usage. You can opt out of personalized ads via <a href="https://www.google.com/settings/ads/" style="color: #ffd700;">Google Ads Settings</a> or your device ad preferences.</p>
+
+            <h2>8. Cookies and Tracking</h2>
+            <p>We use cookies and similar technologies to enhance your experience, analyze usage, and provide personalized content. You can control cookie settings through your browser preferences.</p>
+
+            <h3>Advertising and Cookies</h3>
+            <p>On free plans, ads may be displayed by third-party networks (e.g., Google AdSense/AdMob). These providers may use cookies or mobile advertising IDs to serve personalized ads based on your interests and usage. You can opt out of personalized ads via <a href="https://www.google.com/settings/ads/" style="color: #ffd700;">Google Ads Settings</a> or your device ad preferences.</p>
+
+            <h2>9. Third-Party Services</h2>
+            <p>Our website may contain links to third-party services. We are not responsible for the privacy practices of these external sites and encourage you to review their privacy policies.</p>
+
+            <h2>9. Third-Party Services</h2>
+            <p>Our website may contain links to third-party services. We are not responsible for the privacy practices of these external sites and encourage you to review their privacy policies.</p>
+
+            <h2>10. Children's Privacy</h2>
+            <p>Our services are not intended for users under 18 years of age. We do not knowingly collect personal information from children under 18.</p>
+
+            <h2>10. Children's Privacy</h2>
+            <p>Our services are not intended for users under 18 years of age. We do not knowingly collect personal information from children under 18.</p>
+
+            <h2>11. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new policy on this page with an updated effective date.</p>
+
+            <h2>11. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new policy on this page with an updated effective date.</p>
+
+            <h2>12. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or our data practices, please contact us at:</p>
+            <ul>
+                <li>Email: support@percentrade.com</li>
+                <li>Through our <a href="contact.html" style="color: #ffd700;">contact form</a></li>
+            </ul>
+
+            <p style="margin-top: 3rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
+                <em>This Privacy Policy is effective as of the date listed above and applies to all users of Percentrade's analytics services.</em>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="terms-of-use.html">Terms of Use</a>
+                <span class="separator">|</span>
+                <a href="about.html">About Us</a>
+                <span class="separator">|</span>
+                <a href="mailto:support@percentrade.com">support@percentrade.com</a>
+                <span class="separator">|</span>
+                <a href="home.html">Home</a>
+            </div>
+            <p>&copy; 2025 Percentrade. All rights reserved. | Advanced Analytics & Statistical Intelligence</p>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
+
+

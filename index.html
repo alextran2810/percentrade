@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentrade - Loading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .intro-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .intro-logo {
+            height: 300px;
+            width: auto;
+            margin-bottom: 2rem;
+            animation: flash 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+        }
+
+        .intro-text {
+            color: #ffd700;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+
+        .intro-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.3rem;
+            animation: fadeInUp 1s ease-out 1s both;
+            margin-bottom: 1rem;
+        }
+
+        .intro-slogan {
+            font-size: 1rem;
+            color: #ffd700;
+            margin-bottom: 3rem;
+            font-weight: 400;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 1.5s both;
+        }
+
+
+
+
+
+        /* Animations */
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        /* Fade out animation for page transition */
+        .fade-out {
+            animation: fadeOut 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .intro-logo {
+                height: 200px;
+            }
+            
+            .intro-text {
+                font-size: 2rem;
+            }
+            
+            .intro-slogan {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <img src="percentrade_logo.png" alt="Percentrade" class="intro-logo">
+        <h1 class="intro-text">Percentrade</h1>
+        <p class="intro-slogan">Light in the darkness</p>
+    </div>
+
+    <script>
+        // Auto-redirect to home page after animation completes
+        setTimeout(() => {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 500);
+        }, 3000); // Total animation time: 3 seconds
+
+        // Allow users to click/tap to skip intro
+        document.addEventListener('click', () => {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 500);
+        });
+
+        // Allow users to press any key to skip intro
+        document.addEventListener('keydown', () => {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
