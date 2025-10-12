@@ -492,6 +492,11 @@
                 header.style.webkitBackdropFilter = 'blur(20px)';
             }
         });
+
+        // Check if first-time visitor - redirect to intro page
+        if (!localStorage.getItem('percentradeVisited')) {
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>

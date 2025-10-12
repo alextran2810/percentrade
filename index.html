@@ -120,29 +120,40 @@
     </div>
 
     <script>
-        // Auto-redirect to home page after animation completes
-        setTimeout(() => {
-            document.body.classList.add('fade-out');
+        // Check if user has visited before
+        const hasVisited = localStorage.getItem('percentradeVisited');
+        
+        if (hasVisited) {
+            // Skip intro if user has visited before
+            window.location.href = 'home.html';
+        } else {
+            // Mark as visited
+            localStorage.setItem('percentradeVisited', 'true');
+            
+            // Auto-redirect to home page after animation completes
             setTimeout(() => {
-                window.location.href = 'home.html';
-            }, 500);
-        }, 3000); // Total animation time: 3 seconds
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = 'home.html';
+                }, 500);
+            }, 3000); // Total animation time: 3 seconds
 
-        // Allow users to click/tap to skip intro
-        document.addEventListener('click', () => {
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-                window.location.href = 'home.html';
-            }, 500);
-        });
+            // Allow users to click/tap to skip intro
+            document.addEventListener('click', () => {
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = 'home.html';
+                }, 500);
+            });
 
-        // Allow users to press any key to skip intro
-        document.addEventListener('keydown', () => {
-            document.body.classList.add('fade-out');
-            setTimeout(() => {
-                window.location.href = 'home.html';
-            }, 500);
-        });
+            // Allow users to press any key to skip intro
+            document.addEventListener('keydown', () => {
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = 'home.html';
+                }, 500);
+            });
+        }
     </script>
 </body>
 </html>

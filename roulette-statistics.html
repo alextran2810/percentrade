@@ -525,6 +525,11 @@
                 alert('This feature is coming soon! Stay tuned for updates.');
             });
         });
+
+        // Check if first-time visitor - redirect to intro page
+        if (!localStorage.getItem('percentradeVisited')) {
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 </html>
