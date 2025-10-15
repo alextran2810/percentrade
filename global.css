@@ -1,0 +1,28 @@
+/* Global text-size normalization derived from index.html */
+
+/* Header */
+.logo-text { font-size: 1.35rem !important; font-weight: bold; }
+.nav-links a { font-size: 0.95rem !important; }
+
+/* Body */
+h1 { font-size: 2.5rem !important; }
+h2 { font-size: 1.9rem !important; }
+h3 { font-size: 1.1rem !important; }
+p { font-size: 1.05rem !important; }
+li { font-size: 1.05rem !important; }
+
+/* Footer */
+.footer-links { font-size: 0.9rem !important; }
+.footer-links a { font-size: 0.9rem !important; }
+.social-links a { font-size: 0.95rem !important; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-text { font-size: 1.15rem !important; }
+  h1 { font-size: 2.1rem !important; }
+}
+
+@media (max-width: 480px) {
+  .logo-text { font-size: 1.05rem !important; }
+  h1 { font-size: 1.8rem !important; }
+}
