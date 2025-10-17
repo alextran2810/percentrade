@@ -118,3 +118,23 @@ Both `terms-of-use.html` and `privacy-policy.html` now include detailed sections
 - [ ] Add communication preferences to user account settings
 - [ ] Test redirect pages (terms.html and privacy.html)
 - [ ] Consider cookie consent banner implementation
+
+---
+
+## Update: October 16, 2025 — SMS Opt-In and Proof of Consent Policy
+
+### Summary
+- Added new file: `sms-opt-in-policy.html` documenting SMS OTP verification usage, consent capture, proof-of-consent records, STOP/HELP keywords, message frequency, carrier rates, retention, privacy, and contact.
+- Cross-references added:
+   - `privacy-policy.html`: Communication Rights now links to the SMS Opt-In Policy.
+   - `terms-of-use.html`: Communication Types now links to the SMS Opt-In Policy.
+
+### Compliance Notes
+- Policy clarifies that SMS is used for OTP/security only (no marketing SMS without separate consent).
+- Proof-of-consent records include: consent event type, timestamps, IP, user agent, provider delivery status; OTP codes are not stored in plaintext.
+- STOP/HELP handling and re-opt-in guidance included.
+
+### Suggested Engineering Tasks
+- Ensure backend logs consent events with timestamps, IP, UA, and delivery status; avoid storing plaintext OTP.
+- Add STOP/HELP keyword handling with confirmation messaging.
+- Expose re-opt-in flow in account settings.
