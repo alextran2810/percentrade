@@ -1,29 +1,19 @@
-<!doctype html><!DOCTYPE html>
-
-<html><html lang="en">
-
-<head><head>
-
-<meta http-equiv="refresh" content="0; url=/about/">    <meta charset="UTF-8">
-
-<link rel="canonical" href="https://percentrade.com/about/">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Redirecting...</title>    <title>About Us - Percentrade</title>
-
-</head>    <script>
-
-<body>        // Check BEFORE page loads - redirect first-time visitors to intro
-
-<p>Redirecting to <a href="/about/">About Us</a>...</p>        if (!localStorage.getItem('percentradeVisited')) {
-
-</body>            // Save the current page to return to after intro
-
-</html>            sessionStorage.setItem('returnToPage', window.location.href);
-
-            window.location.replace('index.html');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Percentrade</title>
+    <link rel="canonical" href="https://percentrade.com/about/">
+    <script>
+        // Check BEFORE page loads - redirect first-time visitors to intro
+        if (!localStorage.getItem('percentradeVisited')) {
+            // Save the current page to return to after intro
+            sessionStorage.setItem('returnToPage', window.location.href);
+            window.location.replace('/index.html');
         }
     </script>
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="/global.css">
     <style>
         * {
             margin: 0;
@@ -474,13 +464,13 @@
         <!-- Header -->
         <header>
         <nav class="container">
-            <a href="home.html" class="logo-container">
-                <img src="percentrade_logo.png" alt="Percentrade" class="logo">
+            <a href="/home.html" class="logo-container">
+                <img src="/percentrade_logo.png" alt="Percentrade" class="logo">
                 <span class="logo-text">Light in the darkness</span>
             </a>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/contact/">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -549,15 +539,15 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
                 <span class="separator">|</span>
-                <a href="terms-of-use.html">Terms of Use</a>
+                <a href="/terms-of-use/">Terms of Use</a>
                 <span class="separator">|</span>
-                <a href="contact.html">Contact Us</a>
+                <a href="/contact/">Contact Us</a>
                 <span class="separator">|</span>
                 <a href="mailto:support@percentrade.com">support@percentrade.com</a>
                 <span class="separator">|</span>
-                <a href="home.html">Home</a>
+                <a href="/home.html">Home</a>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">

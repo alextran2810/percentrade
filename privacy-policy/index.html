@@ -1,29 +1,19 @@
-<!doctype html><!DOCTYPE html>
-
-<html><html lang="en">
-
-<head><head>
-
-<meta http-equiv="refresh" content="0; url=/privacy-policy/">    <meta charset="UTF-8">
-
-<link rel="canonical" href="https://percentrade.com/privacy-policy/">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Redirecting...</title>    <title>Privacy Policy - Percentrade</title>
-
-</head>    <script>
-
-<body>        // Check BEFORE page loads - redirect first-time visitors to intro
-
-<p>Redirecting to <a href="/privacy-policy/">Privacy Policy</a>...</p>        if (!localStorage.getItem('percentradeVisited')) {
-
-</body>            // Save the current page to return to after intro
-
-</html>            sessionStorage.setItem('returnToPage', window.location.href);
-
-            window.location.replace('index.html');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Percentrade</title>
+    <link rel="canonical" href="https://percentrade.com/privacy-policy/">
+    <script>
+        // Check BEFORE page loads - redirect first-time visitors to intro
+        if (!localStorage.getItem('percentradeVisited')) {
+            // Save the current page to return to after intro
+            sessionStorage.setItem('returnToPage', window.location.href);
+            window.location.replace('/index.html');
         }
     </script>
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="/global.css">
     <style>
         * {
             margin: 0;
@@ -304,13 +294,13 @@
         <!-- Header -->
         <header>
         <nav class="container">
-            <a href="home.html" class="logo-container">
-                <img src="percentrade_logo.png" alt="Percentrade" class="logo">
+            <a href="/home.html" class="logo-container">
+                <img src="/percentrade_logo.png" alt="Percentrade" class="logo">
                 <span class="logo-text">Light in the darkness</span>
             </a>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/about/">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -351,7 +341,7 @@
                 <li>Payment method metadata (card brand, last 4 digits) via payment provider</li>
                 <li>We do not store full credit card information - handled by third-party processors</li>
             </ul>
-            <p style="margin-top:0.5rem;">For billing practices including subscription auto-renewal, cancellations, trials, and refunds, please see our <a href="terms-of-use.html" style="color:#ffd700;">Terms of Use</a>.</p>
+            <p style="margin-top:0.5rem;">For billing practices including subscription auto-renewal, cancellations, trials, and refunds, please see our <a href="/terms-of-use/" style="color:#ffd700;">Terms of Use</a>.</p>
 
             <h2>2. How We Use Your Information</h2>
             <p>We use the information we collect to:</p>
@@ -395,7 +385,7 @@
                 <li>Withdraw consent for specific communication channels without affecting your account</li>
                 <li>View records of consent you've provided upon request</li>
             </ul>
-            <p>For SMS OTP verification details and the proof-of-consent records we keep, please see our <a href="sms-opt-in-policy.html" style="color:#ffd700;">SMS Opt-In and Proof of Consent Policy</a>.</p>
+            <p>For SMS OTP verification details and the proof-of-consent records we keep, please see our <a href="/sms-opt-in-policy/" style="color:#ffd700;">SMS Opt-In and Proof of Consent Policy</a>.</p>
 
             <h2>4. Information Sharing</h2>
             <p>We do not sell, trade, or otherwise transfer your personal information to third parties, except in the following circumstances:</p>
@@ -478,7 +468,7 @@
             <p>If you have questions about this Privacy Policy or our data practices, please contact us at:</p>
             <ul>
                 <li>Email: support@percentrade.com</li>
-                <li>Through our <a href="contact.html" style="color: #ffd700;">contact form</a></li>
+                <li>Through our <a href="/contact/" style="color: #ffd700;">contact form</a></li>
             </ul>
 
             <p style="margin-top: 3rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
@@ -491,15 +481,15 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
                 <span class="separator">|</span>
-                <a href="terms-of-use.html">Terms of Use</a>
+                <a href="/terms-of-use/">Terms of Use</a>
                 <span class="separator">|</span>
-                <a href="about.html">About Us</a>
+                <a href="/about/">About Us</a>
                 <span class="separator">|</span>
                 <a href="mailto:support@percentrade.com">support@percentrade.com</a>
                 <span class="separator">|</span>
-                <a href="home.html">Home</a>
+                <a href="/home.html">Home</a>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">

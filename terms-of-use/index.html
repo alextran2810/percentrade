@@ -1,29 +1,19 @@
-<!doctype html><!DOCTYPE html>
-
-<html><html lang="en">
-
-<head><head>
-
-<meta http-equiv="refresh" content="0; url=/terms-of-use/">    <meta charset="UTF-8">
-
-<link rel="canonical" href="https://percentrade.com/terms-of-use/">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Redirecting...</title>    <title>Terms of Use - Percentrade</title>
-
-</head>    <script>
-
-<body>        // Check BEFORE page loads - redirect first-time visitors to intro
-
-<p>Redirecting to <a href="/terms-of-use/">Terms of Use</a>...</p>        if (!localStorage.getItem('percentradeVisited')) {
-
-</body>            // Save the current page to return to after intro
-
-</html>            sessionStorage.setItem('returnToPage', window.location.href);
-
-            window.location.replace('index.html');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - Percentrade</title>
+    <link rel="canonical" href="https://percentrade.com/terms-of-use/">
+    <script>
+        // Check BEFORE page loads - redirect first-time visitors to intro
+        if (!localStorage.getItem('percentradeVisited')) {
+            // Save the current page to return to after intro
+            sessionStorage.setItem('returnToPage', window.location.href);
+            window.location.replace('/index.html');
         }
     </script>
-    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="/global.css">
     <style>
         * {
             margin: 0;
@@ -312,13 +302,13 @@
         <!-- Header -->
         <header>
         <nav class="container">
-            <a href="home.html" class="logo-container">
-                <img src="percentrade_logo.png" alt="Percentrade" class="logo">
+            <a href="/home.html" class="logo-container">
+                <img src="/percentrade_logo.png" alt="Percentrade" class="logo">
                 <span class="logo-text">Light in the darkness</span>
             </a>
             <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/about/">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -382,7 +372,7 @@
                 <li><strong>Paid Plan:</strong> Provides enhanced features and an ad-free experience.</li>
                 <li>We may modify plan features with reasonable notice.</li>
             </ul>
-            <p>Free plan users acknowledge that third-party ad networks (e.g., Google AdSense/AdMob) may display ads and collect data as outlined in our <a href="privacy-policy.html" style="color: #ffd700;">Privacy Policy</a>.</p>
+            <p>Free plan users acknowledge that third-party ad networks (e.g., Google AdSense/AdMob) may display ads and collect data as outlined in our <a href="/privacy-policy/" style="color: #ffd700;">Privacy Policy</a>.</p>
 
             <h2>7. Subscriptions, Payments, and Refunds</h2>
             <ul>
@@ -412,7 +402,7 @@
             </ul>
 
             <h2>10. Privacy and Data</h2>
-            <p>Your privacy is important to us. Please review our <a href="privacy-policy.html" style="color: #ffd700;">Privacy Policy</a> to understand how we collect, use, and protect your information.</p>
+            <p>Your privacy is important to us. Please review our <a href="/privacy-policy/" style="color: #ffd700;">Privacy Policy</a> to understand how we collect, use, and protect your information.</p>
 
             <h2>11. User Consent and Communications</h2>
             <h3>Consent for Communications</h3>
@@ -430,7 +420,7 @@
                 <li><strong>Marketing Communications:</strong> Product updates, new features, promotional offers, and newsletters (you may opt-out at any time)</li>
                 <li><strong>Support Communications:</strong> Responses to your inquiries and customer service interactions</li>
             </ul>
-            <p>For SMS OTP verification, consent, and opt-out instructions, please see our <a href="sms-opt-in-policy.html" style="color:#ffd700;">SMS Opt-In and Proof of Consent Policy</a>.</p>
+            <p>For SMS OTP verification, consent, and opt-out instructions, please see our <a href="/sms-opt-in-policy/" style="color:#ffd700;">SMS Opt-In and Proof of Consent Policy</a>.</p>
 
             <h3>Opt-In Requirements</h3>
             <ul>
@@ -517,7 +507,7 @@
             <p>For questions about these Terms of Use, please contact us:</p>
             <ul>
                 <li>Email: support@percentrade.com</li>
-                <li>Contact form: <a href="contact.html" style="color: #ffd700;">Contact Us</a></li>
+                <li>Contact form: <a href="/contact/" style="color: #ffd700;">Contact Us</a></li>
             </ul>
 
             <div class="important" style="margin-top: 3rem;">
@@ -534,15 +524,15 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="/privacy-policy/">Privacy Policy</a>
                 <span class="separator">|</span>
-                <a href="terms-of-use.html">Terms of Use</a>
+                <a href="/terms-of-use/">Terms of Use</a>
                 <span class="separator">|</span>
-                <a href="about.html">About Us</a>
+                <a href="/about/">About Us</a>
                 <span class="separator">|</span>
                 <a href="mailto:support@percentrade.com">support@percentrade.com</a>
                 <span class="separator">|</span>
-                <a href="home.html">Home</a>
+                <a href="/home.html">Home</a>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">
