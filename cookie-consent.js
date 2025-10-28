@@ -77,8 +77,7 @@
                 </div>
                 <div class="cookie-consent-buttons">
                     <button id="cookie-accept-all" class="cookie-btn cookie-btn-accept">Accept All</button>
-                    <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline Non-Essential</button>
-                    <button id="cookie-customize" class="cookie-btn cookie-btn-customize">Customize</button>
+                    <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
                 </div>
             </div>
         `;
@@ -189,16 +188,6 @@
                 border-color: rgba(255, 255, 255, 0.5);
             }
 
-            .cookie-btn-customize {
-                background: transparent;
-                color: #ffd700;
-                border: 1px solid #ffd700;
-            }
-
-            .cookie-btn-customize:hover {
-                background: rgba(255, 215, 0, 0.1);
-            }
-
             /* Mobile responsive */
             @media (max-width: 768px) {
                 #cookie-consent-banner {
@@ -258,11 +247,6 @@
         document.getElementById('cookie-decline').addEventListener('click', function() {
             saveConsent(false);
             closeBanner();
-        });
-
-        document.getElementById('cookie-customize').addEventListener('click', function() {
-            // Redirect to cookie policy page where users can learn more
-            window.location.href = '/cookie-policy/';
         });
     }
 
