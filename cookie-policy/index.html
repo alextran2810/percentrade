@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Percentrade</title>
+    <link rel="canonical" href="https://percentrade.com/cookie-policy/">
+    <script>
+        // Check BEFORE page loads - redirect first-time visitors to intro
+        if (!localStorage.getItem('percentradeVisited')) {
+            sessionStorage.setItem('returnToPage', window.location.href);
+            window.location.replace('/index.html');
+        }
+    </script>
+    <link rel="stylesheet" href="/global.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 12px; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white; padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 1000;
+        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit; }
+        .logo { height: 45px; width: auto; }
+        .logo-text { color: #ffd700; font-size: 1.35rem; font-weight: bold; display: inline-block; transition: opacity 0.4s ease; }
+        .logo-text--fade { opacity: 0; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+        .nav-links a:hover { color: #ffd700; }
+        .main-content { padding: 120px 0 60px; display: flex; justify-content: center; }
+        h1 { font-size: 3rem; margin-bottom: 2rem; text-align: center; color: #ffd700; }
+        h2 { font-size: 2.1rem; margin: 2rem 0 1rem 0; color: #ffd700; }
+        h3 { margin: 1.2rem 0 0.6rem 0; color: white; font-size: 1.2rem; }
+        p { margin-bottom: 1rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; }
+        ul { margin: 1rem 0 1rem 2rem; color: rgba(255, 255, 255, 0.85); font-size: 1.05rem; }
+        li { margin-bottom: 0.5rem; }
+        .last-updated { text-align: center; color: rgba(255, 255, 255, 0.6); font-style: italic; margin-bottom: 2rem; }
+        .cookie-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: rgba(255, 255, 255, 0.05); }
+        .cookie-table th { background: rgba(255, 215, 0, 0.2); color: #ffd700; padding: 0.75rem; text-align: left; border: 1px solid rgba(255, 255, 255, 0.2); }
+        .cookie-table td { padding: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.85); }
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: white; text-align: center; padding: 2rem 0;
+        }
+        .footer-links { margin-bottom: 1rem; font-size: 0.9rem; }
+        .footer-links a { color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease; padding: 0 5px; }
+        .footer-links a:hover { color: #ffd700; }
+        .footer-links .separator { color: rgba(255, 255, 255, 0.5); margin: 0 10px; }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; }
+        .social-links a { display: inline-flex; align-items: center; gap: 0.45rem; color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease; font-size: 1rem; }
+        .social-links svg { width: 18px; height: 18px; fill: rgba(255, 215, 0, 0.9); transition: fill 0.3s ease; }
+        .social-links a:hover { color: #ffd700; }
+        .social-links a:hover svg { fill: #ffd700; }
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            .nav-links { display: none; }
+            .logo { height: 35px; }
+            .logo-text { font-size: 1.15rem; }
+            h1 { font-size: 2rem; }
+            footer { padding: 1.5rem 0; }
+            .footer-links { flex-direction: column; gap: 10px; }
+            .footer-links .separator { display: none; }
+            .social-links { flex-direction: column; gap: 8px; }
+            .cookie-table { font-size: 0.9rem; }
+            .cookie-table th, .cookie-table td { padding: 0.5rem; }
+        }
+    </style>
+    <meta name="description" content="Percentrade Cookie Policy explaining what cookies we use, their purpose, and how you can control them.">
+    <meta property="og:title" content="Cookie Policy - Percentrade">
+    <meta property="og:description" content="Learn about the cookies Percentrade uses and how to manage your preferences.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://percentrade.com/cookie-policy/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cookie Policy - Percentrade">
+    <meta name="twitter:description" content="Learn about the cookies Percentrade uses and how to manage your preferences.">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="/home.html" class="logo-container">
+                <img src="/percentrade_logo.png" alt="Percentrade" class="logo">
+                <span class="logo-text">Light in the darkness</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/about/">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Cookie Policy</h1>
+            <p class="last-updated">Last updated: October 28, 2025</p>
+
+            <h2>1. Introduction</h2>
+            <p>This Cookie Policy explains how Percentrade ("we," "us," or "our") uses cookies and similar tracking technologies on our website and mobile applications. By using our services, you consent to the use of cookies as described in this policy.</p>
+
+            <h2>2. What Are Cookies?</h2>
+            <p>Cookies are small text files that are placed on your device (computer, smartphone, tablet) when you visit a website. They help the website remember information about your visit, such as your preferences and login status, to make your next visit easier and the site more useful to you.</p>
+
+            <h3>Types of Cookies:</h3>
+            <ul>
+                <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser</li>
+                <li><strong>Persistent Cookies:</strong> Cookies that remain on your device for a set period or until you delete them</li>
+                <li><strong>First-Party Cookies:</strong> Cookies set by Percentrade directly</li>
+                <li><strong>Third-Party Cookies:</strong> Cookies set by our partners and service providers</li>
+            </ul>
+
+            <h2>3. Cookies We Use</h2>
+
+            <h3>3.1 Strictly Necessary Cookies</h3>
+            <p>These cookies are essential for the website to function properly. They enable core functionality such as security, authentication, and session management. You cannot opt out of these cookies.</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>percentradeVisited</td>
+                        <td>Remembers if you've seen the intro animation to prevent showing it on every visit</td>
+                        <td>Persistent (no expiration)</td>
+                    </tr>
+                    <tr>
+                        <td>sessionID</td>
+                        <td>Maintains your login session</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td>CSRF_token</td>
+                        <td>Security token to prevent cross-site request forgery attacks</td>
+                        <td>Session</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.2 Functional Cookies</h3>
+            <p>These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings.</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>language_pref</td>
+                        <td>Stores your language preference</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td>theme_pref</td>
+                        <td>Remembers your display theme preference</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td>returnToPage</td>
+                        <td>Remembers which page to return to after viewing the intro</td>
+                        <td>Session</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.3 Analytics Cookies</h3>
+            <p>We use analytics cookies to understand how visitors interact with our website, which helps us improve our services.</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                        <th>Third Party</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google Analytics</td>
+                        <td>Tracks website usage, page views, user behavior patterns</td>
+                        <td>Up to 2 years</td>
+                        <td>Google Inc.</td>
+                    </tr>
+                    <tr>
+                        <td>Hotjar</td>
+                        <td>Heatmaps and session recordings to understand user experience</td>
+                        <td>1 year</td>
+                        <td>Hotjar Ltd.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Note:</strong> Analytics cookies collect information in an aggregated and anonymous form. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+            <h3>3.4 Advertising Cookies</h3>
+            <p>We may use advertising cookies to deliver relevant advertisements and measure campaign effectiveness.</p>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                        <th>Third Party</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Google Ads</td>
+                        <td>Delivers targeted advertising and remarketing</td>
+                        <td>Up to 90 days</td>
+                        <td>Google Inc.</td>
+                    </tr>
+                    <tr>
+                        <td>Facebook Pixel</td>
+                        <td>Tracks conversions and enables targeted ads on Facebook/Instagram</td>
+                        <td>Up to 90 days</td>
+                        <td>Meta Platforms Inc.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.5 Social Media Cookies</h3>
+            <p>These cookies are set by social media platforms when you share content or interact with social features on our site.</p>
+
+            <ul>
+                <li><strong>Facebook:</strong> Enables sharing and tracking engagement</li>
+                <li><strong>Instagram:</strong> Integrates Instagram content and features</li>
+                <li><strong>TikTok:</strong> Embeds TikTok videos and content</li>
+                <li><strong>YouTube:</strong> Embeds videos and tracks viewing behavior</li>
+            </ul>
+
+            <h2>4. Local Storage and Similar Technologies</h2>
+            <p>In addition to cookies, we use HTML5 local storage and session storage to store information locally on your device:</p>
+
+            <ul>
+                <li><strong>localStorage.percentradeVisited:</strong> Tracks intro page viewing status (persists until manually cleared)</li>
+                <li><strong>sessionStorage.returnToPage:</strong> Temporarily stores return URL (cleared when browser tab closes)</li>
+            </ul>
+
+            <h2>5. How We Use Cookies</h2>
+            <p>We use cookies for the following purposes:</p>
+
+            <ul>
+                <li><strong>Authentication:</strong> To keep you logged in securely across sessions</li>
+                <li><strong>Security:</strong> To protect against fraudulent activity and enhance account security</li>
+                <li><strong>Preferences:</strong> To remember your settings and customization choices</li>
+                <li><strong>Analytics:</strong> To understand how you use our services and identify areas for improvement</li>
+                <li><strong>Advertising:</strong> To deliver relevant ads and measure campaign performance</li>
+                <li><strong>Performance:</strong> To optimize loading times and user experience</li>
+            </ul>
+
+            <h2>6. Managing Your Cookie Preferences</h2>
+
+            <h3>6.1 Browser Settings</h3>
+            <p>Most web browsers allow you to control cookies through their settings. You can:</p>
+
+            <ul>
+                <li>Delete all cookies from your browser</li>
+                <li>Block third-party cookies</li>
+                <li>Block all cookies from specific websites</li>
+                <li>Receive notifications when cookies are set</li>
+            </ul>
+
+            <p><strong>Important:</strong> Blocking or deleting cookies may impact your ability to use certain features of our website and may require you to re-enter login credentials.</p>
+
+            <h3>6.2 Browser-Specific Instructions</h3>
+            <ul>
+                <li><strong>Google Chrome:</strong> Settings → Privacy and security → Cookies and other site data</li>
+                <li><strong>Mozilla Firefox:</strong> Settings → Privacy & Security → Cookies and Site Data</li>
+                <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
+                <li><strong>Microsoft Edge:</strong> Settings → Cookies and site permissions → Cookies and site data</li>
+            </ul>
+
+            <h3>6.3 Opt-Out Tools</h3>
+            <p>You can also use industry opt-out tools:</p>
+
+            <ul>
+                <li><a href="http://optout.aboutads.info/" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Digital Advertising Alliance (DAA) Opt-Out</a></li>
+                <li><a href="http://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Network Advertising Initiative (NAI) Opt-Out</a></li>
+                <li><a href="http://www.youronlinechoices.eu/" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Your Online Choices (EU)</a></li>
+                <li><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Google Analytics Opt-Out Browser Add-on</a></li>
+            </ul>
+
+            <h3>6.4 Mobile Device Settings</h3>
+            <p>For mobile devices, you can manage tracking preferences:</p>
+
+            <ul>
+                <li><strong>iOS:</strong> Settings → Privacy → Tracking → Allow Apps to Request to Track</li>
+                <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+            </ul>
+
+            <h2>7. Do Not Track Signals</h2>
+            <p>Some browsers support a "Do Not Track" (DNT) signal. Currently, there is no industry standard for how to respond to DNT signals. We do not currently respond to DNT browser signals but respect your right to control your data through the methods described above.</p>
+
+            <h2>8. Third-Party Cookies</h2>
+            <p>We work with trusted third-party service providers who may set cookies on your device. We do not control these third-party cookies. We encourage you to review the privacy policies of these third parties:</p>
+
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Google Privacy Policy</a></li>
+                <li><a href="https://www.facebook.com/privacy/explanation" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Facebook Data Policy</a></li>
+                <li><a href="https://www.hotjar.com/legal/policies/privacy/" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Hotjar Privacy Policy</a></li>
+            </ul>
+
+            <h2>9. Cookies and Children</h2>
+            <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect information from children through cookies. If you are under 18, please do not use our services or provide any information. See our <a href="/privacy-policy/" style="color:#ffd700;">Privacy Policy</a> for more details.</p>
+
+            <h2>10. Updates to This Policy</h2>
+            <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. We will post the updated policy on this page with a new "Last updated" date. We encourage you to review this policy periodically.</p>
+
+            <h2>11. Your Rights</h2>
+            <p>Depending on your jurisdiction, you may have rights regarding cookies and tracking technologies:</p>
+
+            <ul>
+                <li><strong>Right to Consent:</strong> In certain regions (e.g., EU/EEA), we obtain your consent before placing non-essential cookies</li>
+                <li><strong>Right to Withdraw Consent:</strong> You can withdraw consent at any time by adjusting your browser settings or using opt-out tools</li>
+                <li><strong>Right to Access:</strong> You can request information about the data collected through cookies</li>
+                <li><strong>Right to Deletion:</strong> You can request deletion of data collected through cookies (subject to legal retention requirements)</li>
+            </ul>
+
+            <h2>12. Contact Us</h2>
+            <p>If you have questions about our use of cookies or this Cookie Policy, please contact us:</p>
+
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@percentrade.com" style="color:#ffd700;">support@percentrade.com</a></li>
+                <li><strong>Contact Form:</strong> <a href="/contact/" style="color:#ffd700;">Contact Us</a></li>
+                <li><strong>Subject Line:</strong> "Cookie Policy Inquiry"</li>
+            </ul>
+
+            <h2>13. Related Policies</h2>
+            <p>For more information about how we handle your data, please review:</p>
+
+            <ul>
+                <li><a href="/privacy-policy/" style="color:#ffd700;">Privacy Policy</a></li>
+                <li><a href="/terms-of-use/" style="color:#ffd700;">Terms of Use</a></li>
+                <li><a href="/sms-opt-in-policy/" style="color:#ffd700;">SMS Opt-In Policy</a></li>
+            </ul>
+
+            <p style="margin-top: 3rem; color: rgba(255, 255, 255, 0.6); text-align: center;">
+                <em>This Cookie Policy is part of our commitment to transparency and data protection.</em>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/privacy-policy/">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a href="/cookie-policy/">Cookie Policy</a>
+                <span class="separator">|</span>
+                <a href="/terms-of-use/">Terms of Use</a>
+                <span class="separator">|</span>
+                <a href="/sms-opt-in-policy/">SMS Opt-In</a>
+                <span class="separator">|</span>
+                <a href="/about/">About Us</a>
+                <span class="separator">|</span>
+                <a href="mailto:support@percentrade.com">support@percentrade.com</a>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M22 2.1A2.1 2.1 0 0 0 19.9 0H4.1A2.1 2.1 0 0 0 2 2.1v15.8A2.1 2.1 0 0 0 4.1 20H12v-6H9.5V11H12V8.6c0-2.4 1.5-3.8 3.7-3.8 1.1 0 2.2 0.08 2.2 0.08v2.4h-1.5c-1.2 0-1.4 0.56-1.4 1.4V11h2.7l-0.4 3H15v6h4.9A2.1 2.1 0 0 0 22 17.9Z"/>
+                    </svg>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/percentrade" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M12 2.2c3.2 0 3.6 0 4.9 0.1 1.2 0.1 1.9 0.2 2.3 0.4 0.6 0.2 1 0.4 1.4 0.8s0.6 0.8 0.8 1.4c0.2 0.4 0.3 1.1 0.4 2.3 0.1 1.3 0.1 1.7 0.1 4.9s0 3.6-0.1 4.9c-0.1 1.2-0.2 1.9-0.4 2.3-0.2 0.6-0.4 1-0.8 1.4s-0.8 0.6-1.4 0.8c-0.4 0.2-1.1 0.3-2.3 0.4-1.3 0.1-1.7 0.1-4.9 0.1s-3.6 0-4.9-0.1c-1.2-0.1-1.9-0.2-2.3-0.4-0.6-0.2-1-0.4-1.4-0.8s-0.6-0.8-0.8-1.4c-0.2-0.4-0.3-1.1-0.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6 0.1-4.9c0.1-1.2 0.2-1.9 0.4-2.3 0.2-0.6 0.4-1 0.8-1.4s0.8-0.6 1.4-0.8c0.4-0.2 1.1-0.3 2.3-0.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.7 0 8.3 0 7 0.1 5.7 0.2 4.7 0.4 3.9 0.7 3 1 2.3 1.4 1.6 2.1S1 3 0.7 3.9C0.4 4.7 0.2 5.7 0.1 7 0 8.3 0 8.7 0 12s0 3.7 0.1 5c0.1 1.3 0.3 2.3 0.6 3.1 0.3 0.9 0.7 1.6 1.4 2.3s1.4 1.1 2.3 1.4c0.8 0.3 1.8 0.5 3.1 0.6 1.3 0.1 1.7 0.1 5 0.1s3.7 0 5-0.1c1.3-0.1 2.3-0.3 3.1-0.6 0.9-0.3 1.6-0.7 2.3-1.4s1.1-1.4 1.4-2.3c0.3-0.8 0.5-1.8 0.6-3.1 0.1-1.3 0.1-1.7 0.1-5s0-3.7-0.1-5c-0.1-1.3-0.3-2.3-0.6-3.1C23 1.6 22.6 0.9 21.9 0.2S20.5 0 19.7 0 17.8 0 16.5 0 15.3 0 12 0Z"/>
+                        <path d="M12 5.8A6.2 6.2 0 1 0 18.2 12 6.2 6.2 0 0 0 12 5.8Zm0 10.2A4 4 0 1 1 16 12a4 4 0 0 1-4 4Z"/>
+                        <path d="M18.4 4.5a1.4 1.4 0 1 0 1.4 1.4 1.4 1.4 0 0 0-1.4-1.4Z"/>
+                    </svg>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@percentrade" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M21.7 7.2c-2 0-3.9-0.8-5.3-2.2V16a5.8 5.8 0 1 1-5.8-5.8 5.9 5.9 0 0 1 1.2 0.12v3.1a2.7 2.7 0 1 0 2.7 2.7V3h3.2a4.7 4.7 0 0 0 4.1 4.1Z"/>
+                    </svg>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://www.youtube.com/@percentrade" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M23.5 6.2s-0.2-1.7-0.8-2.5a3 3 0 0 0-2.1-2.1C18.3 1 12 1 12 1s-6.3 0-8.6 0.6a3 3 0 0 0-2.1 2.1C0.7 4.5 0.5 6.2 0.5 6.2A31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 0.5 5.8s0.2 1.7 0.8 2.5a3 3 0 0 0 2.1 2.1C5.7 22.9 12 22.9 12 22.9s6.3 0 8.6-0.6a3 3 0 0 0 2.1-2.1c0.6-0.8 0.8-2.5 0.8-2.5A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-0.5-5.8ZM9.8 16.2V7.8l6.2 4.2Z"/>
+                    </svg>
+                    <span>YouTube</span>
+                </a>
+            </div>
+            <p>&copy; 2025 Percentrade. All rights reserved. | Advanced Analytics & Statistical Intelligence</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const logoTextEl = document.querySelector('.logo-text');
+            if (!logoTextEl) return;
+            const labels = ['Light in the darkness', 'Percentrade'];
+            let index = 0; const intervalMs = 4000; const fadeMs = 350;
+            setInterval(() => {
+                logoTextEl.classList.add('logo-text--fade');
+                setTimeout(() => {
+                    index = (index + 1) % labels.length;
+                    logoTextEl.textContent = labels[index];
+                    logoTextEl.classList.remove('logo-text--fade');
+                }, fadeMs);
+            }, intervalMs);
+        })();
+    </script>
+</body>
+</html>
