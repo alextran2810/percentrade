@@ -90,13 +90,11 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: rgba(26, 26, 26, 0.98);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                color: white;
+                background: #ffffff;
+                color: #1f2937;
                 padding: 20px;
-                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
-                border-top: 2px solid rgba(255, 215, 0, 0.3);
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+                border-top: 2px solid #e5e7eb;
                 z-index: 9999;
                 animation: slideUp 0.4s ease-out;
             }
@@ -131,22 +129,22 @@
                 margin: 0;
                 font-size: 14px;
                 line-height: 1.6;
-                color: rgba(255, 255, 255, 0.9);
+                color: #4b5563;
             }
 
             .cookie-consent-message strong {
-                color: #ffd700;
+                color: #0f766e;
                 font-size: 16px;
             }
 
             .cookie-consent-message a {
-                color: #ffd700;
+                color: #0d9488;
                 text-decoration: underline;
                 transition: color 0.3s;
             }
 
             .cookie-consent-message a:hover {
-                color: #ffed4e;
+                color: #0f766e;
             }
 
             .cookie-consent-buttons {
@@ -158,7 +156,7 @@
             .cookie-btn {
                 padding: 12px 24px;
                 border: none;
-                border-radius: 25px;
+                border-radius: 8px;
                 font-size: 14px;
                 font-weight: 600;
                 cursor: pointer;
@@ -167,25 +165,25 @@
             }
 
             .cookie-btn-accept {
-                background: rgba(255, 215, 0, 0.9);
-                color: #1a1a1a;
+                background: #0d9488;
+                color: #ffffff;
             }
 
             .cookie-btn-accept:hover {
-                background: #ffd700;
-                transform: translateY(-2px);
-                box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+                background: #0f766e;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             }
 
             .cookie-btn-decline {
-                background: rgba(255, 255, 255, 0.1);
-                color: white;
-                border: 1px solid rgba(255, 255, 255, 0.3);
+                background: #f3f4f6;
+                color: #4b5563;
+                border: 1px solid #d1d5db;
             }
 
             .cookie-btn-decline:hover {
-                background: rgba(255, 255, 255, 0.2);
-                border-color: rgba(255, 255, 255, 0.5);
+                background: #e5e7eb;
+                border-color: #9ca3af;
             }
 
             /* Mobile responsive */
