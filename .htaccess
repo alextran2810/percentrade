@@ -1,0 +1,27 @@
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.percentrade\.com [NC]
+RewriteRule ^(.*)$ https://percentrade.com/$1 [R=301,L]
+
+# Redirect /home and /home/ to root
+RewriteRule ^home/?$ / [R=301,L]
+
+# Redirect old .html files to clean URLs
+RewriteRule ^about\.html$ /about/ [R=301,L]
+RewriteRule ^contact\.html$ /contact/ [R=301,L]
+RewriteRule ^privacy-policy\.html$ /privacy-policy/ [R=301,L]
+RewriteRule ^terms-of-use\.html$ /terms-of-use/ [R=301,L]
+RewriteRule ^roulette-statistics\.html$ /roulette-statistics/ [R=301,L]
+RewriteRule ^sms-opt-in-policy\.html$ /sms-opt-in-policy/ [R=301,L]
+RewriteRule ^cookie-policy\.html$ /cookie-policy/ [R=301,L]
+RewriteRule ^home\.html$ / [R=301,L]
+
+# Ensure trailing slash for directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !^/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
