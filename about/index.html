@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Percentrade</title>
     <link rel="canonical" href="https://percentrade.com/about/">
-    <link rel="icon" type="image/png" href="/percentrade_logo.png">
-    <link rel="apple-touch-icon" href="/percentrade_logo.png">
+    <link rel="icon" type="image/png" href="../percentrade_logo.png">
+    <link rel="apple-touch-icon" href="../percentrade_logo.png">
     <script>
         // Check BEFORE page loads - redirect first-time visitors to intro
         if (!localStorage.getItem('percentradeVisited')) {
             // Save the current page to return to after intro
             sessionStorage.setItem('returnToPage', window.location.href);
-            window.location.replace('/index.html');
+            window.location.replace('../index.html');
         }
     </script>
-    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="../global.css">
     <style>
         * {
             margin: 0;
@@ -27,11 +27,11 @@
             font-size: 12px;
         }
 
-        body {
+                body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #ffffff;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #7f1d1d 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -77,7 +77,7 @@
         }
 
         .logo-text {
-            color: #ffd700;
+            color: #fbbf24;
             font-size: 1.35rem;
             font-weight: bold;
             display: inline-block;
@@ -101,12 +101,12 @@
         }
 
         .nav-links a:hover {
-            color: #ffd700;
+            color: #fbbf24;
         }
 
         /* Page Header */
         .page-header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #7f1d1d 100%);
             color: white;
             padding: 80px 0 50px;
             text-align: center;
@@ -141,13 +141,13 @@
         .about h2 {
             font-size: 1.3rem;
             margin-bottom: 2rem;
-            color: #ffd700;
+            color: #dc2626;
         }
 
         .about h3 {
             font-size: 1.1rem;
             margin: 2rem 0 1rem 0;
-            color: #ffd700;
+            color: #dc2626;
         }
 
         .about p {
@@ -166,13 +166,13 @@
 
         .about li {
             margin: 0.5rem 0;
-            color: #666;
+            color: #60a5fa;
         }
 
         /* Contact Section */
         .contact-section {
             padding: 80px 0 90px;
-            background: linear-gradient(135deg, #191919 0%, #232323 100%);
+            background: linear-gradient(135deg, #1e40af 0%, #991b1b 100%);
             color: white;
         }
 
@@ -180,7 +180,7 @@
             text-align: center;
             font-size: 1.9rem;
             margin-bottom: 2.2rem;
-            color: #ffd700;
+            color: #dc2626;
         }
 
         .contact-wrapper {
@@ -223,7 +223,7 @@
         }
 
         .contact-card li strong {
-            color: #ffd700;
+            color: #dc2626;
         }
 
         .contact-form .form-group {
@@ -252,7 +252,7 @@
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: #ffd700;
+            border-color: #dc2626;
             background: rgba(0, 0, 0, 0.35);
         }
 
@@ -264,7 +264,7 @@
         .contact-form button {
             width: 100%;
             background: rgba(255, 215, 0, 0.22);
-            color: #ffd700;
+            color: #dc2626;
             border: 1px solid rgba(255, 215, 0, 0.4);
             padding: 12px 20px;
             border-radius: 24px;
@@ -312,7 +312,7 @@
         }
 
         .footer-links a:hover {
-            color: #ffd700;
+            color: #fbbf24;
         }
 
         .footer-links .separator {
@@ -340,16 +340,16 @@
         .social-links svg {
             width: 18px;
             height: 18px;
-            fill: rgba(255, 215, 0, 0.9);
+            fill: #fbbf24;
             transition: fill 0.3s ease;
         }
 
         .social-links a:hover {
-            color: #ffd700;
+            color: #fbbf24;
         }
 
         .social-links a:hover svg {
-            fill: #ffd700;
+            fill: #fbbf24;
         }
 
         /* Responsive */
@@ -466,13 +466,13 @@
         <!-- Header -->
         <header>
             <nav class="container">
-            <a href="/" class="logo-container">
-                <img src="/percentrade_logo.png" alt="Percentrade" class="logo">
+            <a href="../index.html" class="logo-container">
+                <img src="../percentrade_logo.png" alt="Percentrade" class="logo">
                 <span class="logo-text">Light in the darkness</span>
             </a>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/contact/">Contact Us</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../contact/index.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -541,15 +541,15 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="/privacy-policy/">Privacy Policy</a>
+                <a href="../privacy-policy/index.html">Privacy Policy</a>
                 <span class="separator">|</span>
-                <a href="/terms-of-use/">Terms of Use</a>
+                <a href="../terms-of-use/index.html">Terms of Use</a>
                 <span class="separator">|</span>
-                <a href="/contact/">Contact Us</a>
+                <a href="../contact/index.html">Contact Us</a>
                 <span class="separator">|</span>
                 <a href="mailto:support@percentrade.com">support@percentrade.com</a>
                 <span class="separator">•</span>
-                <a href="/">Home</a>
+                <a href="../index.html">Home</a>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">
@@ -635,6 +635,6 @@
 
     </script>
     <!-- Cookie Consent Banner -->
-    <script src="/cookie-consent.js"></script>
+    <script src="../cookie-consent.js"></script>
 </body>
 </html>

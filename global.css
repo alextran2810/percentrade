@@ -1,5 +1,20 @@
 /* Global text-size normalization derived from index.html */
 
+/* Color Theme Variables */
+:root {
+  --primary-red: #dc2626;
+  --primary-blue: #2563eb;
+  --dark-red: #991b1b;
+  --dark-blue: #1e40af;
+  --light-red: #fee2e2;
+  --light-blue: #dbeafe;
+  --gradient-start: #1e3a8a;
+  --gradient-end: #7f1d1d;
+  --text-light: #ffffff;
+  --text-dark: #1f2937;
+  --accent: #fbbf24;
+}
+
 /* Header */
 .logo-text { font-size: 1.35rem !important; font-weight: bold; }
 .nav-links a { font-size: 0.95rem !important; }

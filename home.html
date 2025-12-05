@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Percentrade delivers advanced analytics, roulette statistics, and data-driven insights to help you make smarter decisions across gaming and financial markets.">
     <link rel="canonical" href="https://percentrade.com/">
     <meta property="og:title" content="Percentrade - Advanced Analytics & Statistical Intelligence">
@@ -16,8 +16,8 @@
     <meta name="twitter:description" content="Advance your strategy with Percentrade's roulette insights, baccarat trends, and market-ready analytics.">
     <meta name="twitter:image" content="https://percentrade.com/percentrade_logo.png">
     <title>Percentrade - Advanced Analytics & Statistical Intelligence</title>
-    <link rel="icon" type="image/png" href="/percentrade_logo.png">
-    <link rel="apple-touch-icon" href="/percentrade_logo.png">
+    <link rel="icon" type="image/png" href="percentrade_logo.png">
+    <link rel="apple-touch-icon" href="percentrade_logo.png">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -47,7 +47,7 @@
             window.location.replace('index.html');
         }
     </script>
-    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="global.css">
     <style>
         * {
             margin: 0;
@@ -59,11 +59,11 @@
             font-size: 12px;
         }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #1f2937;
-            background: #faf8f5;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1e3a8a 0%, #7f1d1d 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -77,9 +77,9 @@
 
         /* Header */
         header {
-            background: #ffffff;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            color: #1f2937;
+            background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
             padding: 1rem 0;
             position: fixed;
             width: 100%;
@@ -107,7 +107,7 @@
         }
 
         .logo-text {
-            color: #0d9488;
+            color: #fbbf24;
             font-size: 1.35rem;
             font-weight: bold;
             display: inline-block;
@@ -125,7 +125,7 @@
         }
 
         .nav-links a {
-            color: #4b5563;
+            color: white;
             text-decoration: none;
             transition: color 0.3s;
             font-size: 0.95rem;
@@ -133,13 +133,13 @@
         }
 
         .nav-links a:hover {
-            color: #0d9488;
+            color: #fbbf24;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
-            color: #1f2937;
+            background: linear-gradient(135deg, #1e3a8a 0%, #7f1d1d 100%);
+            color: white;
             min-height: calc(100vh - 80px);
             text-align: center;
             position: relative;
@@ -153,7 +153,7 @@
         .hero h1 {
             font-size: 2.6rem;
             margin-bottom: 1rem;
-            color: #0f766e;
+            color: white;
             letter-spacing: -0.5px;
             font-weight: 700;
             animation: fadeInUp 1s ease-out;
@@ -162,14 +162,14 @@
         .hero p {
             font-size: 1.1rem;
             margin-bottom: 2.2rem;
-            color: #4b5563;
+            color: white;
             max-width: 600px;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
         .cta-button {
             display: inline-block;
-            background: #0d9488;
+            background: #dc2626;
             color: #ffffff;
             border: none;
             padding: 14px 32px;
@@ -183,7 +183,7 @@
         }
 
         .cta-button:hover {
-            background: #0f766e;
+            background: #1e40af;
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
@@ -191,15 +191,15 @@
         /* Features Section */
         .features {
             padding: 90px 0;
-            background: #ffffff;
-            color: #1f2937;
+            background: linear-gradient(135deg, #1e40af 0%, #991b1b 100%);
+            color: white;
         }
 
         .features h2 {
             text-align: center;
             font-size: 2rem;
             margin-bottom: 2.5rem;
-            color: #0f766e;
+            color: #dc2626;
             font-weight: 700;
         }
 
@@ -211,14 +211,16 @@
         }
 
         .feature-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
             text-align: center;
             transition: all 0.3s ease;
-            color: #1f2937;
+            color: white;
             flex: 1 1 240px;
             max-width: 280px;
             min-width: 220px;
@@ -227,7 +229,7 @@
         .feature-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            border-color: #14b8a6;
+            border-color: #dc2626;
         }
 
         .feature-icon {
@@ -237,9 +239,9 @@
             width: 80px;
             height: 80px;
             margin: 0 auto 1rem auto;
-            color: #0d9488;
+            color: #dc2626;
             font-size: 2.4rem;
-            background: #f0fdfa;
+            background: rgba(0, 0, 0, 0.2);
             border-radius: 12px;
         }
 
@@ -252,13 +254,13 @@
         .feature-card h3 {
             font-size: 1.2rem;
             margin-bottom: 0.8rem;
-            color: #0f766e;
+            color: #dc2626;
             font-weight: 600;
         }
 
         .feature-card p {
             font-size: 0.95rem;
-            color: #6b7280;
+            color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
         }
 
@@ -269,15 +271,15 @@
         }
 
         .clickable-card:hover .btn-link {
-            background: #ffd700;
-            color: #1a1a1a;
+            background: #dc2626;
+            color: #1e3a8a;
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(100, 255, 218, 0.3);
         }
 
         .btn-link {
             display: inline-block;
-            background: #0d9488;
+            background: #dc2626;
             color: #ffffff;
             padding: 10px 24px;
             text-decoration: none;
@@ -289,7 +291,7 @@
         }
 
         .btn-link:hover {
-            background: #0f766e;
+            background: #1e40af;
             transform: translateY(-2px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
@@ -297,15 +299,15 @@
         /* Contact Section */
         .contact-section {
             padding: 80px 0 90px;
-            background: #faf8f5;
-            color: #1f2937;
+            background: linear-gradient(135deg, #1e40af 0%, #991b1b 100%);
+            color: white;
         }
 
         .contact-section h2 {
             text-align: center;
             font-size: 2rem;
             margin-bottom: 2.2rem;
-            color: #0f766e;
+            color: #dc2626;
             font-weight: 700;
         }
 
@@ -318,19 +320,21 @@
 
         .contact-card,
         .contact-form {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 18px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+            padding: 1.8rem;
             flex: 1 1 280px;
             max-width: 320px;
         }
 
         .contact-card p {
             font-size: 0.95rem;
-            color: #6b7280;
-            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.55;
             margin-bottom: 1.4rem;
         }
 
@@ -342,13 +346,12 @@
 
         .contact-card li {
             margin-bottom: 0.9rem;
-            color: #4b5563;
+            color: rgba(255, 255, 255, 0.85);
             font-size: 0.95rem;
         }
 
         .contact-card li strong {
-            color: #0d9488;
-            font-weight: 600;
+            color: #dc2626;
         }
 
         .contact-form .form-group {
@@ -360,26 +363,25 @@
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 0.4rem;
-            color: #374151;
         }
 
         .contact-form input,
         .contact-form textarea {
             width: 100%;
             padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #d1d5db;
-            background: #ffffff;
-            color: #1f2937;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
             font-size: 0.95rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: border-color 0.3s ease, background 0.3s ease;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
             outline: none;
-            border-color: #14b8a6;
-            box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.1);
+            border-color: #dc2626;
+            background: rgba(0, 0, 0, 0.35);
         }
 
         .contact-form textarea {
@@ -389,28 +391,28 @@
 
         .contact-form button {
             width: 100%;
-            background: #0d9488;
-            color: #ffffff;
-            border: none;
+            background: rgba(255, 215, 0, 0.22);
+            color: #dc2626;
+            border: 1px solid rgba(255, 215, 0, 0.4);
             padding: 12px 20px;
-            border-radius: 8px;
+            border-radius: 24px;
             font-weight: 600;
-            font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .contact-form button:hover {
-            background: #0f766e;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            background: rgba(255, 215, 0, 0.34);
+            border-color: rgba(255, 215, 0, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(255, 215, 0, 0.2);
         }
 
         /* Footer */
         footer {
-            background: #ffffff;
-            border-top: 1px solid #e5e7eb;
-            color: #6b7280;
+            background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
             text-align: center;
             padding: 2rem 0;
             margin-top: 60px;
@@ -422,18 +424,18 @@
         }
 
         .footer-links a {
-            color: #6b7280;
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s ease;
             padding: 0 5px;
         }
 
         .footer-links a:hover {
-            color: #0d9488;
+            color: #fbbf24;
         }
 
         .footer-links .separator {
-            color: #d1d5db;
+            color: rgba(255, 255, 255, 0.5);
             margin: 0 10px;
         }
 
@@ -447,8 +449,8 @@
         .social-links a {
             display: inline-flex;
             align-items: center;
-            gap: 0.4rem;
-            color: #6b7280;
+            gap: 0.45rem;
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s ease;
             font-size: 0.95rem;
@@ -457,16 +459,16 @@
         .social-links svg {
             width: 18px;
             height: 18px;
-            fill: #0d9488;
+            fill: #fbbf24;
             transition: fill 0.3s ease;
         }
 
         .social-links a:hover {
-            color: #0d9488;
+            color: #fbbf24;
         }
 
         .social-links a:hover svg {
-            fill: #0f766e;
+            fill: #fbbf24;
         }
 
         .main-wrapper {
@@ -609,13 +611,13 @@
         <!-- Header -->
         <header>
             <nav class="container">
-                <a href="/" class="logo-container">
-                    <img src="/percentrade_logo.png" alt="Percentrade" class="logo">
+                <a href="home.html" class="logo-container">
+                    <img src="percentrade_logo.png" alt="Percentrade" class="logo">
                     <span class="logo-text">Light in the darkness</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about/index.html">About Us</a></li>
                 </ul>
             </nav>
         </header>
@@ -627,9 +629,9 @@
                 <p>Advanced Analytics & Statistical Intelligence for Gaming and Financial Markets</p>
                 
                 <div class="features-grid" style="margin-top: 4rem;">
-                    <a href="/roulette-statistics/" class="feature-card clickable-card">
+                    <a href="roulette-statistics/index.html" class="feature-card clickable-card">
                         <div class="feature-icon">
-                            <img src="/roumate_logo.png" alt="Roumate logo">
+                            <img src="roumate_logo.png" alt="Roumate logo">
                         </div>
                         <h3>Roulette Statistics</h3>
                         <p>Advanced statistical analysis of roulette patterns, hot/cold numbers, and probability distributions to inform your gaming strategy.</p>
@@ -689,15 +691,15 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="/privacy-policy/">Privacy Policy</a>
+                <a href="privacy-policy/index.html">Privacy Policy</a>
                 <span class="separator">|</span>
-                <a href="/terms-of-use/">Terms of Use</a>
+                <a href="terms-of-use/index.html">Terms of Use</a>
                 <span class="separator">|</span>
-                <a href="/about/">About Us</a>
+                <a href="about/index.html">About Us</a>
                 <span class="separator">|</span>
                 <a href="mailto:support@percentrade.com">support@percentrade.com</a>
                 <span class="separator">•</span>
-                <a href="/">Home</a>
+                <a href="home.html">Home</a>
             </div>
             <div class="social-links">
                 <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">
@@ -793,6 +795,6 @@
         })();
     </script>
     <!-- Cookie Consent Banner -->
-    <script src="/cookie-consent.js"></script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>
