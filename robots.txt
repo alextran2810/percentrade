@@ -17,3 +17,4 @@ Disallow: /sms-opt-in-policy/index.html
 Disallow: /cookie-policy/index.html
 
 Sitemap: https://percentrade.com/sitemap.xml
+Sitemap: https://roumate.percentrade.com/sitemap.xml

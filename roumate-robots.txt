@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roumate.percentrade.com/sitemap.xml
