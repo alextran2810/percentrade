@@ -70,8 +70,8 @@
                 <div class="cookie-consent-message">
                     <p>
                         <strong>🍪 We Value Your Privacy</strong><br>
-                        We use cookies to enhance your experience, analyze site traffic, and for marketing purposes. 
-                        By clicking "Accept All", you consent to our use of cookies. 
+                        We use cookies and Google Analytics to enhance your experience, analyze site traffic, and understand how visitors interact with our website. 
+                        By clicking "Accept All", you consent to our use of cookies and analytics. 
                         <a href="/cookie-policy/" target="_blank">Learn more about our Cookie Policy</a>.
                     </p>
                 </div>
@@ -90,11 +90,13 @@
                 bottom: 0;
                 left: 0;
                 right: 0;
-                background: #ffffff;
-                color: #1f2937;
+                background: rgba(30, 58, 138, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                color: #ffffff;
                 padding: 20px;
-                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
-                border-top: 2px solid #e5e7eb;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+                border-top: 2px solid rgba(251, 191, 36, 0.3);
                 z-index: 9999;
                 animation: slideUp 0.4s ease-out;
             }
@@ -129,22 +131,22 @@
                 margin: 0;
                 font-size: 14px;
                 line-height: 1.6;
-                color: #4b5563;
+                color: rgba(255, 255, 255, 0.9);
             }
 
             .cookie-consent-message strong {
-                color: #0f766e;
+                color: #fbbf24;
                 font-size: 16px;
             }
 
             .cookie-consent-message a {
-                color: #0d9488;
+                color: #fbbf24;
                 text-decoration: underline;
                 transition: color 0.3s;
             }
 
             .cookie-consent-message a:hover {
-                color: #0f766e;
+                color: #fcd34d;
             }
 
             .cookie-consent-buttons {
@@ -165,25 +167,28 @@
             }
 
             .cookie-btn-accept {
-                background: #0d9488;
-                color: #ffffff;
+                background: rgba(251, 191, 36, 0.2);
+                border: 2px solid #fbbf24;
+                color: #fbbf24;
             }
 
             .cookie-btn-accept:hover {
-                background: #0f766e;
+                background: #fbbf24;
+                color: #1e3a8a;
                 transform: translateY(-1px);
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                box-shadow: 0 4px 6px -1px rgba(251, 191, 36, 0.3), 0 2px 4px -1px rgba(251, 191, 36, 0.2);
             }
 
             .cookie-btn-decline {
-                background: #f3f4f6;
-                color: #4b5563;
-                border: 1px solid #d1d5db;
+                background: rgba(255, 255, 255, 0.1);
+                color: rgba(255, 255, 255, 0.8);
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             .cookie-btn-decline:hover {
-                background: #e5e7eb;
-                border-color: #9ca3af;
+                background: rgba(255, 255, 255, 0.2);
+                border-color: rgba(255, 255, 255, 0.4);
+                color: #ffffff;
             }
 
             /* Mobile responsive */
