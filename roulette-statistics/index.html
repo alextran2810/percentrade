@@ -274,12 +274,10 @@
 
         .video-container {
             margin: 3rem auto 0;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            overflow: hidden;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            overflow: visible;
         }
 
         .video-placeholder {
@@ -402,8 +400,38 @@
                 font-size: 2.5rem;
             }
 
+            .page-header h2 {
+                font-size: 1.5rem !important;
+            }
+
             .page-header p {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
+            }
+
+            .access-section {
+                padding: 30px 20px;
+            }
+
+            .access-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+                margin-top: 1rem;
+            }
+
+            .access-card {
+                padding: 1.25rem;
+            }
+
+            .access-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .access-icon {
+                font-size: 2rem;
+            }
+
+            .features-section {
+                padding: 40px 20px;
             }
 
             .features-list {
@@ -423,13 +451,31 @@
                 font-size: 0.9rem;
             }
 
+            .video-section {
+                padding: 40px 20px;
+            }
+
+            .video-section h2 {
+                font-size: 2rem !important;
+            }
+
+            .video-container {
+                margin-top: 1.5rem;
+            }
+
             footer {
                 padding: 1.5rem 0;
+            }
+
+            footer p {
+                font-size: 0.85rem;
+                line-height: 1.5;
             }
 
             .footer-links {
                 flex-direction: column;
                 gap: 10px;
+                font-size: 0.85rem;
             }
 
             .footer-links .separator {
@@ -437,18 +483,65 @@
             }
 
             .social-links {
-                flex-direction: column;
-                gap: 8px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .social-links a {
+                font-size: 0.9rem;
             }
         }
 
         @media (max-width: 480px) {
-            .page-header h1 {
-                font-size: 2rem;
+            .page-header {
+                padding: 90px 0 30px;
+            }
+
+            .page-header h1 img {
+                max-width: 120px !important;
+            }
+
+            .page-header h2 {
+                font-size: 1.3rem !important;
+            }
+
+            .page-header p {
+                font-size: 0.95rem;
             }
 
             .logo-text {
                 font-size: 1.05rem;
+            }
+
+            .access-section {
+                padding: 25px 15px;
+            }
+
+            .access-card {
+                padding: 1rem;
+            }
+
+            .access-card h3 {
+                font-size: 1rem;
+            }
+
+            .access-icon {
+                font-size: 1.75rem;
+            }
+
+            .access-btn {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .features-section {
+                padding: 30px 15px;
+            }
+
+            .features-section h2 {
+                font-size: 1.8rem !important;
             }
 
             .features-list {
@@ -457,6 +550,43 @@
 
             .feature-item {
                 padding: 1rem;
+            }
+
+            .feature-item h4 {
+                font-size: 1.1rem;
+            }
+
+            .feature-item p {
+                font-size: 0.85rem;
+            }
+
+            .video-section {
+                padding: 30px 15px;
+            }
+
+            .video-section h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .video-section p {
+                font-size: 0.95rem;
+            }
+
+            footer p {
+                font-size: 0.75rem;
+            }
+
+            .footer-links {
+                font-size: 0.8rem;
+            }
+
+            .social-links a {
+                font-size: 0.85rem;
+            }
+
+            .social-links svg {
+                width: 16px;
+                height: 16px;
             }
         }
     </style>
@@ -500,16 +630,8 @@
                 
                 <div class="access-card">
                     <div class="access-icon">📱</div>
-                    <h3>iOS App</h3>
-                    <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">Download from the App Store</p>
-                    <a href="#" class="access-btn disabled">Coming Soon</a>
-                    <p style="margin-top: 0.5rem; color: #fbbf24; font-weight: bold; font-size: 0.9rem;">⏳ In Development</p>
-                </div>
-                
-                <div class="access-card">
-                    <div class="access-icon">📱</div>
-                    <h3>Android App</h3>
-                    <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">Get from Google Play Store</p>
+                    <h3>Mobile Apps</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">iOS and Android apps for on-the-go access</p>
                     <a href="#" class="access-btn disabled">Coming Soon</a>
                     <p style="margin-top: 0.5rem; color: #fbbf24; font-weight: bold; font-size: 0.9rem;">⏳ In Development</p>
                 </div>
@@ -595,7 +717,7 @@
                 <a href="../index.html">Home</a>
             </div>
             <div class="social-links">
-                <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/profile.php?id=61585901521673" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                         <path d="M22 2.1A2.1 2.1 0 0 0 19.9 0H4.1A2.1 2.1 0 0 0 2 2.1v15.8A2.1 2.1 0 0 0 4.1 20H12v-6H9.5V11H12V8.6c0-2.4 1.5-3.8 3.7-3.8 1.1 0 2.2 0.08 2.2 0.08v2.4h-1.5c-1.2 0-1.4 0.56-1.4 1.4V11h2.7l-0.4 3H15v6h4.9A2.1 2.1 0 0 0 22 17.9Z"/>
                     </svg>
@@ -622,7 +744,7 @@
                     <span>YouTube</span>
                 </a>
             </div>
-            <p style="text-align: center;">&copy; 2025 Percentrade. All rights reserved. | Advanced Analytics & Statistical Intelligence for Gaming and Financial Markets</p>
+            <p style="text-align: center; margin: 1rem auto 0; max-width: 100%; padding: 0 1rem;">&copy; 2025 Percentrade. All rights reserved. | Advanced Analytics & Statistical Intelligence for Gaming and Financial Markets</p>
         </div>
     </footer>
     </div>

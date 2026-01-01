@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
     <meta name="description" content="Percentrade delivers advanced analytics, roulette statistics, and data-driven insights to help you make smarter decisions across gaming and financial markets.">
     <link rel="canonical" href="https://percentrade.com/">
     <meta property="og:title" content="Percentrade - Advanced Analytics & Statistical Intelligence">
@@ -27,7 +26,7 @@
         "logo": "https://percentrade.com/percentrade_logo.png",
         "description": "Percentrade provides advanced analytics and statistical intelligence for gaming and financial markets, including roulette statistics and upcoming baccarat tools.",
         "sameAs": [
-            "https://www.facebook.com/percentrade",
+            "https://www.facebook.com/profile.php?id=61585901521673",
             "https://www.instagram.com/percentrade",
             "https://www.tiktok.com/@percentrade",
             "https://www.youtube.com/@percentrade"
@@ -73,6 +72,7 @@
             max-width: 960px;
             margin: 0 auto;
             padding: 0 20px;
+            width: 100%;
         }
 
         /* Header */
@@ -164,6 +164,9 @@
             margin-bottom: 2.2rem;
             color: white;
             max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
@@ -329,6 +332,7 @@
             padding: 1.8rem;
             flex: 1 1 280px;
             max-width: 320px;
+            text-align: center;
         }
 
         .contact-card p {
@@ -336,6 +340,13 @@
             color: rgba(255, 255, 255, 0.78);
             line-height: 1.55;
             margin-bottom: 1.4rem;
+            text-align: center;
+        }
+
+        .contact-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
         }
 
         .contact-card ul {
@@ -555,53 +566,138 @@
             }
 
             .social-links {
-                flex-direction: column;
-                gap: 8px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
             }
         }
 
         @media (max-width: 768px) {
-            .features-grid {
+            .container {
+                padding: 0 15px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-section {
+                padding: 60px 15px;
+            }
+
+            .contact-wrapper {
                 flex-direction: column;
                 align-items: center;
             }
 
+            .contact-card,
+            .contact-form {
+                max-width: 100%;
+                width: 100%;
+                text-align: center;
+            }
+
+            .features-grid {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+
             .feature-card {
                 max-width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 140px 15px 50px;
+                min-height: auto;
+                justify-content: flex-start;
             }
 
             .hero h1 {
                 font-size: 2.1rem;
+                text-align: center;
             }
 
             .hero p {
                 font-size: 0.9rem;
+                text-align: center;
+            }
+
+            footer p {
+                text-align: center;
             }
         }
 
         @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
             .logo-text {
                 font-size: 1.05rem;
             }
+
+            .hero {
+                padding: 120px 10px 40px;
+                min-height: auto;
+                justify-content: flex-start;
+            }
+
             .hero h1 {
                 font-size: 1.85rem;
+                text-align: center;
+            }
+
+            .hero p {
+                text-align: center;
             }
 
             .features h2 {
                 font-size: 1.5rem;
+                text-align: center;
             }
 
             .feature-card {
                 padding: 1.1rem;
+                text-align: center;
+            }
+
+            .contact-section {
+                padding: 50px 10px;
             }
 
             .contact-section h2 {
                 font-size: 1.6rem;
+                text-align: center;
             }
 
             .contact-card,
             .contact-form {
                 padding: 1.4rem;
+                text-align: center;
+            }
+
+            .contact-card p,
+            .contact-card ul {
+                text-align: center;
+            }
+
+            footer p {
+                text-align: center;
+                font-size: 0.85rem;
+            }
+
+            .social-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.75rem;
+                justify-content: center;
+            }
+
+            .social-links a {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -702,7 +798,7 @@
                 <a href="home.html">Home</a>
             </div>
             <div class="social-links">
-                <a href="https://www.facebook.com/percentrade" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/profile.php?id=61585901521673" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                         <path d="M22 2.1A2.1 2.1 0 0 0 19.9 0H4.1A2.1 2.1 0 0 0 2 2.1v15.8A2.1 2.1 0 0 0 4.1 20H12v-6H9.5V11H12V8.6c0-2.4 1.5-3.8 3.7-3.8 1.1 0 2.2 0.08 2.2 0.08v2.4h-1.5c-1.2 0-1.4 0.56-1.4 1.4V11h2.7l-0.4 3H15v6h4.9A2.1 2.1 0 0 0 22 17.9Z"/>
                     </svg>

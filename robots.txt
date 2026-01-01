@@ -8,13 +8,6 @@ Disallow: /roulette-statistics.html
 Disallow: /sms-opt-in-policy.html
 Disallow: /cookie-policy.html
 Disallow: /home.html
-Disallow: /about/index.html
-Disallow: /contact/index.html
-Disallow: /privacy-policy/index.html
-Disallow: /terms-of-use/index.html
-Disallow: /roulette-statistics/index.html
-Disallow: /sms-opt-in-policy/index.html
-Disallow: /cookie-policy/index.html
 
 Sitemap: https://percentrade.com/sitemap.xml
 Sitemap: https://roumate.percentrade.com/sitemap.xml
