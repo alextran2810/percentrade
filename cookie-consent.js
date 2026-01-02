@@ -272,6 +272,14 @@
             return;
         }
 
+        // Skip cookie banner on the introduction page (index.html)
+        const currentPath = window.location.pathname;
+        const isIntroPage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/percentrade/') || currentPath.endsWith('/percentrade/index.html');
+        
+        if (isIntroPage) {
+            return; // Don't show cookie banner on intro page
+        }
+
         // Only show banner if user hasn't given consent yet
         if (!hasConsent()) {
             // Small delay to ensure page is fully loaded
