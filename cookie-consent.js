@@ -70,9 +70,10 @@
                 <div class="cookie-consent-message">
                     <p>
                         <strong>🍪 We Value Your Privacy</strong><br>
-                        We use cookies and Google Analytics to enhance your experience, analyze site traffic, and understand how visitors interact with our website. 
-                        By clicking "Accept All", you consent to our use of cookies and analytics. 
-                        <a href="/cookie-policy/" target="_blank">Learn more about our Cookie Policy</a>.
+                        <span class="desktop-text">We use cookies and Google Analytics to enhance your experience, analyze site traffic, and understand how visitors interact with our website. 
+                        By clicking "Accept All", you consent to our use of cookies and analytics.</span>
+                        <span class="mobile-text">We use cookies to enhance your experience.</span>
+                        <a href="/cookie-policy/" target="_blank">Cookie Policy</a>
                     </p>
                 </div>
                 <div class="cookie-consent-buttons">
@@ -191,15 +192,24 @@
                 color: #ffffff;
             }
 
+            .desktop-text {
+                display: inline;
+            }
+            
+            .mobile-text {
+                display: none;
+            }
+
             /* Mobile responsive */
             @media (max-width: 768px) {
                 #cookie-consent-banner {
-                    padding: 15px;
+                    padding: 12px 10px;
                 }
 
                 .cookie-consent-content {
                     flex-direction: column;
                     align-items: stretch;
+                    gap: 10px;
                 }
 
                 .cookie-consent-message {
@@ -207,17 +217,32 @@
                 }
 
                 .cookie-consent-message p {
+                    font-size: 12px;
+                    line-height: 1.4;
+                }
+                
+                .cookie-consent-message strong {
                     font-size: 13px;
+                }
+                
+                .desktop-text {
+                    display: none;
+                }
+                
+                .mobile-text {
+                    display: inline;
                 }
 
                 .cookie-consent-buttons {
-                    flex-direction: column;
+                    flex-direction: row;
                     width: 100%;
+                    gap: 8px;
                 }
 
                 .cookie-btn {
                     width: 100%;
-                    padding: 14px;
+                    padding: 10px 12px;
+                    font-size: 13px;
                 }
             }
 
@@ -272,11 +297,13 @@
             return;
         }
 
-        // Skip cookie banner on the introduction page (index.html)
+        // Skip cookie banner on the introduction page
+        // Check if the page has the intro container or is index.html
+        const hasIntroContainer = document.querySelector('.intro-container') !== null;
         const currentPath = window.location.pathname;
-        const isIntroPage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/percentrade/') || currentPath.endsWith('/percentrade/index.html');
+        const isIndexPage = currentPath === '/' || currentPath === '/index.html' || currentPath.endsWith('/percentrade/') || currentPath.endsWith('/percentrade/index.html');
         
-        if (isIntroPage) {
+        if (hasIntroContainer || isIndexPage) {
             return; // Don't show cookie banner on intro page
         }
 
