@@ -19,8 +19,9 @@
     <link rel="apple-touch-icon" href="../percentrade_logo.png">
     <script>
         // Check BEFORE page loads - redirect first-time visitors to intro
-        if (!localStorage.getItem('percentradeVisited')) {
-            // Save the current page to return to after intro
+        // Skip redirect for search engine crawlers so they can index page content
+        var isBot = /bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot/i.test(navigator.userAgent);
+        if (!isBot && !localStorage.getItem('percentradeVisited')) {
             sessionStorage.setItem('returnToPage', window.location.href);
             window.location.replace('../index.html');
         }

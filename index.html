@@ -165,15 +165,21 @@
     </div>
 
     <script>
-        // Check if user has visited before
-        const hasVisited = localStorage.getItem('percentradeVisited');
+        // Skip all redirects for search engine crawlers so they can index page content
+        var isBot = /bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot/i.test(navigator.userAgent);
         
-        if (hasVisited) {
-            // Skip intro if user has visited before
-            window.location.href = 'home.html';
+        if (isBot) {
+            // Bots see the splash page as-is (canonical points to /)
         } else {
-            // Mark as visited
-            localStorage.setItem('percentradeVisited', 'true');
+            // Check if user has visited before
+            const hasVisited = localStorage.getItem('percentradeVisited');
+            
+            if (hasVisited) {
+                // Skip intro if user has visited before
+                window.location.href = 'home.html';
+            } else {
+                // Mark as visited
+                localStorage.setItem('percentradeVisited', 'true');
             
             // Get the page user wanted to visit (or default to home)
             const returnToPage = sessionStorage.getItem('returnToPage') || 'home.html';
@@ -205,6 +211,7 @@
                 }, 500);
             });
         }
+        } // close isBot check
     </script>
     <!-- Environment Config -->
     <script src="config.js"></script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <meta name="description" content="Percentrade delivers advanced analytics, roulette statistics, and data-driven insights to help you make smarter decisions across gaming and financial markets.">
     <link rel="canonical" href="https://percentrade.com/">
     <meta property="og:title" content="Percentrade - Advanced Analytics & Statistical Intelligence">
@@ -41,8 +41,9 @@
     </script>
     <script>
         // Check BEFORE page loads - redirect first-time visitors to intro
-        if (!localStorage.getItem('percentradeVisited')) {
-            // Save the current page to return to after intro
+        // Skip redirect for search engine crawlers so they can index page content
+        var isBot = /bot|crawl|spider|slurp|googlebot|bingbot|yandex|baidu|duckduckbot|facebookexternalhit|twitterbot|linkedinbot/i.test(navigator.userAgent);
+        if (!isBot && !localStorage.getItem('percentradeVisited')) {
             sessionStorage.setItem('returnToPage', window.location.href);
             window.location.replace('index.html');
         }
