@@ -26,6 +26,7 @@
         }
     </script>
     <link rel="stylesheet" href="../global.css">
+    <script src="../config.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         * {
@@ -698,7 +699,7 @@
                             <label for="message">Message *</label>
                             <textarea id="message" name="message" placeholder="Tell us more about your inquiry..." required></textarea>
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6LdLWj4sAAAAAAe5t4WZCfSeuseTugU2YTHe_9tR" style="margin: 1.5rem 0; display: flex; justify-content: center;"></div>
+                        <div class="g-recaptcha" data-sitekey="" id="contact-recaptcha" style="margin: 1.5rem 0; display: flex; justify-content: center;"></div>
                         <div style="text-align: center;">
                             <button type="submit" class="submit-btn">Send Message</button>
                         </div>
@@ -769,7 +770,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     
     <script>
-        console.log('🔵 CONTACT FORM SCRIPT LOADED');
+        log.debug('Contact form script loaded');
         
         // Custom modal functions
         function showModal(title, message) {
@@ -791,18 +792,19 @@
         });
         
         document.addEventListener('DOMContentLoaded', function () {
-            console.log('🔵 DOM LOADED');
+            log.debug('DOM loaded');
             document.documentElement.style.zoom = '100%';
             document.body.style.zoom = '100%';
         });
 
-        // Initialize Supabase client
-        // REPLACE THESE WITH YOUR ACTUAL SUPABASE CREDENTIALS
-        const SUPABASE_URL = 'https://eqblphvyqfibxhrtniwq.supabase.co';
-        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxYmxwaHZ5cWZpYnhocnRuaXdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTc4MzcwOTUsImV4cCI6MjA3MzQxMzA5NX0.QaTyuEstLGI3ISGli9ykWwmowSDKCXjiHn6xOf1oKEw';
+        // Initialize Supabase client using centralized config
+        const SUPABASE_URL = window.ENV.SUPABASE_URL;
+        const SUPABASE_ANON_KEY = window.ENV.SUPABASE_ANON_KEY;
         
-        console.log('🔵 INITIALIZING SUPABASE');
-        console.log('URL:', SUPABASE_URL);
+        // Set reCAPTCHA site key from config
+        document.getElementById('contact-recaptcha').setAttribute('data-sitekey', window.ENV.RECAPTCHA_SITE_KEY);
+        
+        log.debug('Initializing Supabase');
         let supabaseClient;
         if (typeof window.supabaseClient === 'undefined') {
             supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -810,12 +812,12 @@
         } else {
             supabaseClient = window.supabaseClient;
         }
-        console.log('🔵 SUPABASE CLIENT CREATED');
+        log.debug('Supabase client created');
 
         // Form submission handling
         document.querySelector('#contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            console.log('🟢 ===== FORM SUBMITTED =====');
+            log.debug('Form submitted');
             
             // Check reCAPTCHA
             const recaptchaResponse = grecaptcha.getResponse();
@@ -838,22 +840,21 @@
                 email: email,
                 message: message
             };
-            console.log('🟢 FORM DATA:', formData);
+            log.debug('Form data:', formData);
             
             try {
-                console.log('🟡 SENDING TO SUPABASE...');
+                log.debug('Sending to Supabase...');
                 // Insert data into Supabase
                 const { data, error } = await supabaseClient
                     .from('contact_messages')
                     .insert([formData])
                     .select();
                 
-                console.log('🟡 SUPABASE RESPONSE RECEIVED');
-                console.log('Response data:', data);
-                console.log('Response error:', error);
+                log.debug('Supabase response received');
+                log.debug('Response data:', data);
                 
                 if (error) {
-                    console.error('🔴 SUPABASE ERROR:', {
+                    log.error('Supabase error:', {
                         message: error.message,
                         details: error.details,
                         hint: error.hint,
@@ -862,8 +863,7 @@
                     throw error;
                 }
                 
-                console.log('✅ SUCCESS! MESSAGE SAVED TO DATABASE');
-                console.log('Saved data:', data);
+                log.debug('Message saved to database');
                 
                 // Success message
                 showModal('Success!', 'Thank you for your message! We will get back to you within 24-72 hours.');
@@ -871,14 +871,12 @@
                 grecaptcha.reset();
                 
             } catch (error) {
-                console.error('🔴 ===== ERROR =====');
-                console.error('Error message:', error.message);
-                console.error('Full error:', error);
+                log.error('Form submission error:', error.message);
                 showModal('Error', error.message + '\n\nPlease email us directly at support@percentrade.com');
             } finally {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-                console.log('🟢 ===== FORM SUBMISSION COMPLETE =====');
+                log.debug('Form submission complete');
             }
         });
 
