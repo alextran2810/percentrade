@@ -1,13 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /about.html
-Disallow: /contact.html
-Disallow: /privacy-policy.html
-Disallow: /terms-of-use.html
-Disallow: /roulette-statistics.html
-Disallow: /sms-opt-in-policy.html
-Disallow: /cookie-policy.html
-Disallow: /home.html
+
+# Old .html redirect stubs - Allow crawling so Google can see noindex tags
+# and process the meta refresh redirects to clean URLs
 
 Sitemap: https://percentrade.com/sitemap.xml
-Sitemap: https://roumate.percentrade.com/sitemap.xml
